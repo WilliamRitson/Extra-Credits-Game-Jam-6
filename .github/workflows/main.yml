@@ -3,7 +3,7 @@ on: [push]
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
   BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-  ITCH_GAME: dark-reflection
+  ITCH_GAME: extra-credits-game-jam-6
   ITCH_USER: william-ritson
   
 jobs:
@@ -14,7 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         unityVersion:
-          - 2019.3.11f1
+          - 2019.4.8f1
         targetPlatform:
           - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
           - StandaloneWindows # Build a Windows standalone.
