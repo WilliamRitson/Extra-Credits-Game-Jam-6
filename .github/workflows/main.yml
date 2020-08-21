@@ -3,7 +3,7 @@ on: [push]
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
   BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-  ITCH_GAME: dark-reflection
+  ITCH_GAME: extra-credits-game-jam-6
   ITCH_USER: william-ritson
   
 jobs:
