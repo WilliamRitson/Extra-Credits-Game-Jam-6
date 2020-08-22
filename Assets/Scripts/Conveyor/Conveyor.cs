@@ -22,6 +22,7 @@ public class Conveyor : MonoBehaviour
     //Stops conjured item from moving
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
+        Debug.Log(collisionInfo.transform.name);
         if (collisionInfo.transform.name == "CatZone")
         {
             rb.velocity = new Vector2(0f,0f);
