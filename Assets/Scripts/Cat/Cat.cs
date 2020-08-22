@@ -46,41 +46,56 @@ public class Cat : MonoBehaviour
 
     private void Update()
     {
-        // If we are doing somethign don't move
+        ReduceDurations();
+
+        // If we are doing something don't move
         if (takeingAction) return;
 
-        if (HyperDuration <= 0 && StunnedDuration <= 0)
+        switch (GetCurrentState())
         {
-            catState = State.Neutral;
+            case State.Neutral:
+                Move(3);
+                break;
+            case State.Hyper:
+                Move(hyperMultiplier);
+                break;
         }
+
+    }
+
+
+    private State GetCurrentState()
+    {
+        if (StunnedDuration > 0)
+        {
+            return State.Stunned;
+        } 
+        if (HyperDuration > 0)
+        {
+            return State.Hyper;
+        }
+        return State.Neutral;
+    }
+
+    private void ReduceDurations()
+    {
 
         if (StunnedDuration > 0)
         {
-            catState = State.Stunned;
             StunnedDuration -= Time.deltaTime;
+        }else
+        {
+            StunnedDuration = 0;
         }
 
         if (HyperDuration > 0)
         {
-            if (catState != State.Stunned)
-            {
-                catState = State.Hyper;
-            }
             HyperDuration -= Time.deltaTime;
         }
-
-
-
-        if (catState == State.Neutral)
+        else
         {
-            Move(1);
+            HyperDuration = 0;
         }
-
-        if (catState == State.Hyper)
-        {
-            Move(hyperMultiplier);   
-        } 
-
     }
 
 
