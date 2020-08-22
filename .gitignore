@@ -36,11 +36,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-ProjectSettings/ProjectVersion.txt
-ProjectSettings/ProjectVersion.txt
-ProjectSettings/ProjectVersion.txt
-ProjectSettings/ProjectVersion.txt
-ProjectSettings/ProjectVersion.txt
 
 # IDE files
 .idea
