@@ -66,7 +66,7 @@ public class Cat : MonoBehaviour
 
         if (catState == State.Neutral)
         {
-            Move(3);
+            Move(1);
         }
 
         if (catState == State.Hyper)
