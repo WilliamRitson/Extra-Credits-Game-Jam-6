@@ -55,7 +55,7 @@ public class Cat : MonoBehaviour
 
         //Difficulty scaling functionality
         timeElapsed += Time.deltaTime;
-        CatSpeed = (timeElapsed / 100) + 1;
+        CatSpeed = (timeElapsed / 300) + 1;
 
         // If we are doing something don't move
         if (takeingAction) return;
