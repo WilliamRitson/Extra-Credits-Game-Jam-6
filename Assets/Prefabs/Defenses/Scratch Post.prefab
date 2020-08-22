@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: -3471402147066838126}
   - component: {fileID: -3624481919961819634}
   - component: {fileID: 5580004790034244430}
+  - component: {fileID: -2464339472630909117}
   m_Layer: 0
   m_Name: Scratch Post
   m_TagString: Untagged
@@ -190,8 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6099cb4a579b9b4d9f8f27dcef8d6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumLife: 2
-  currentLife: 2
+  maximumLife: 5
+  currentLife: 5
 --- !u!114 &304067300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +253,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2464339472630909117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971752180545962193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1117ebabb2a0db04bb2a617c6ec26acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  damageType: 4
 --- !u!1 &8297575352515258527
 GameObject:
   m_ObjectHideFlags: 0

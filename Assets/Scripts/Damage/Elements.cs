@@ -1,4 +1,4 @@
 ﻿public enum Element
 {
-    Claws, Noise, Visual
+    Claws, Noise, Visual, OnlyDamageDefense, Distraction
 }

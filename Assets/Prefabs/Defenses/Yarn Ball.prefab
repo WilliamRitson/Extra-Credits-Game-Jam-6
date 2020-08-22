@@ -7,6 +7,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2464339472630909117, guid: 3d03859d47b7a534e9b302815e74a7c1,
+        type: 3}
+      propertyPath: damage
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 304067299, guid: 3d03859d47b7a534e9b302815e74a7c1, type: 3}
+      propertyPath: maximumLife
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 304067299, guid: 3d03859d47b7a534e9b302815e74a7c1, type: 3}
+      propertyPath: currentLife
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 547275803229814933, guid: 3d03859d47b7a534e9b302815e74a7c1,
         type: 3}
       propertyPath: m_LocalPosition.x
