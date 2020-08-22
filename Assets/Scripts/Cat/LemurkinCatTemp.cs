@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Cat : MonoBehaviour
+public class LemurkinCatTemp : MonoBehaviour
 {
     public Transform firePoint;
     public Transform[] movementPoints;
@@ -13,15 +13,20 @@ public class Cat : MonoBehaviour
     private Vector3 movingTowards;
     private AudioSource audioSource;
 
+
+    //
+    private String state;
+
     private CatAction[] actions;
     private bool takeingAction = false;
-    private float StunnedDuration = 0;
-    private float HyperDuration = 0;
-    public float hyperMultiplier = 2;
 
+
+    //Which state the cat is in. 1 is the default state, 2 is distracted, 3 is 
+    private int catState = 1;
 
     private void Start()
     {
+        state = "default";
         audioSource = GetComponent<AudioSource>();
         actions = GetComponents<CatAction>();
         movingTowards = movementPoints[0].position;
@@ -31,9 +36,10 @@ public class Cat : MonoBehaviour
     {
         // If we are doing somethign don't move
         if (takeingAction) return;
-        
-        if (StunnedDuration <=0 && HyperDuration <=0)
+
+        if (state == "default")
         {
+
             // Move towards the next location
             var position = transform.position;
             Vector3 towardsTarget = (movingTowards - position).normalized * (Time.deltaTime * speed);
@@ -46,40 +52,12 @@ public class Cat : MonoBehaviour
             movingTowards = GetNextMovementLoc();
             StartCoroutine(TakeAction());
         }
-
-        if (StunnedDuration > 0)
-        {
-            StunnedDuration -= Time.deltaTime;
-        }
-
-        if (HyperDuration > 0)
-        {
-            //TODO: Lose energy over time.
-            HyperDuration -= Time.deltaTime;
-
-            if (StunnedDuration < 0)
-            {
-                // Move towards the next location, affected by Hyper Speed
-                var position = transform.position;
-                Vector3 towardsTarget = (movingTowards - position).normalized * (Time.deltaTime * speed * hyperMultiplier);
-                transform.position = position + towardsTarget;
-
-                // Exit if we are not close enough to the destination
-                if (Vector3.Distance(transform.position, movingTowards) > 0.1) return;
-
-                // When we reach a destination stop moving and take an action
-                movingTowards = GetNextMovementLoc();
-                //TOOO: This spell should potentially be faster by the rate of HyperMultiplier
-                StartCoroutine(TakeAction());
-            }
-            
-        } 
-
     }
 
     private IEnumerator TakeAction()
     {
         CatAction toPerform = actions[Random.Range(0, actions.Length)];
+        Debug.Log("Use action: " + toPerform.abilityTitle);
         MovingTextManager.Instance.ShowMessage(toPerform.abilityTitle, transform.position, Color.white);
         if (toPerform.soundEffect != null)
         {
@@ -94,7 +72,7 @@ public class Cat : MonoBehaviour
     private Vector3 GetNextMovementLoc()
     {
         int nextMoveIndex = nextMovementPoint + moveDir;
-        if (nextMoveIndex == movementPoints.Length  || nextMoveIndex == -1)
+        if (nextMoveIndex == movementPoints.Length || nextMoveIndex == -1)
         {
             moveDir *= -1;
         }
