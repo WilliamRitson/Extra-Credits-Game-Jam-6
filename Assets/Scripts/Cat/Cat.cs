@@ -54,7 +54,7 @@ public class Cat : MonoBehaviour
         switch (GetCurrentState())
         {
             case State.Neutral:
-                Move(3);
+                Move(1);
                 break;
             case State.Hyper:
                 Move(hyperMultiplier);
