@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa73a5e30574376bf80cf78f6e59fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 65c3bddaf0ce8e24db4359ec7bc2ddcc, type: 3}
   projectile: {fileID: 8471719469245231904, guid: 9a2a381ae82ca5a448a90db4f23d039a,
     type: 3}
   timeToPerform: 2
