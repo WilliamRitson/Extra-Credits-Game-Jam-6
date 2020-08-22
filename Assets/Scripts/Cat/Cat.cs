@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,6 +9,7 @@ public class Cat : MonoBehaviour
 {
     public Transform firePoint;
     public Transform[] movementPoints;
+    private readonly Dictionary<Transform, int> movementPointAttraction = new Dictionary<Transform, int>();
     public float speed = 2;
     private int nextMovementPoint = 0;
     private int moveDir = 1;
@@ -25,6 +28,10 @@ public class Cat : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         actions = GetComponents<CatAction>();
         movingTowards = movementPoints[0].position;
+        foreach (var point in movementPoints)
+        {
+            movementPointAttraction[point] = 1;
+        }
     }
 
     private void Update()
@@ -92,13 +99,40 @@ public class Cat : MonoBehaviour
 
     private Vector3 GetNextMovementLoc()
     {
-        int nextMoveIndex = nextMovementPoint + moveDir;
-        if (nextMoveIndex == movementPoints.Length  || nextMoveIndex == -1)
+        var tickets = new List<Vector3>();
+        foreach (var point in movementPoints)
         {
-            moveDir *= -1;
+            Debug.Log($"Attraction to point {point} is {movementPointAttraction[point]}.");
+            for (var i = 0; i < movementPointAttraction[point]; i++)
+            {
+                tickets.Add(point.position);
+            }
         }
+        return tickets[Random.Range(0, tickets.Count)];
+    }
 
-        nextMovementPoint += moveDir;
-        return movementPoints[nextMovementPoint].position;
+    public void RegisterAttractor(float positionY, int strength)
+    {
+        movementPointAttraction[GetClosestMovementPoint(positionY)] += strength;
+    }
+
+    public void DeregisterAttractor(float positionY, int strength)
+    {
+        movementPointAttraction[GetClosestMovementPoint(positionY)] -= strength;
+    }
+
+    private Transform GetClosestMovementPoint(float positionY)
+    {
+        float lowestDistance = float.PositiveInfinity;
+        Transform best = null;
+        foreach (var point in movementPoints)
+        {
+            var dist = Math.Abs(point.position.y - positionY);
+            if (dist >= lowestDistance) continue;
+            lowestDistance = dist;
+            best = point;
+        }
+        Debug.Log($"Closest point to {positionY} is {best}.");
+        return best;
     }
 }
