@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public void Update()
     {
 
-        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) )&& transform.position.y <=3.5)
+        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) )&& transform.position.y <= 2.5)
         {
             transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up, speed/100);
         }

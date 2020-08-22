@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 558403176018070349}
   - component: {fileID: 1024665253544405202}
   - component: {fileID: 5075044537475893085}
+  - component: {fileID: 1451697715}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Cat
@@ -231,7 +232,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   speed: 2
   hyperMultiplier: 2
 --- !u!114 &1451697704
@@ -330,6 +330,23 @@ MonoBehaviour:
   projectile: {fileID: 8000936457808179361, guid: c73053d8e2f0f5a4b9ee84f6a097f595,
     type: 3}
   timeToPerform: 4
+--- !u!114 &1451697715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500625279112540713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df0fd2510e146ccaaad261e542ea04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityTitle: Butt-hole exposure! :o
+  soundEffect: {fileID: 0}
+  projectile: {fileID: 5605535154798982812, guid: 191e797d1a594234d86d972043839994,
+    type: 3}
+  timeToPerform: 6
 --- !u!1 &6996558938377914104
 GameObject:
   m_ObjectHideFlags: 0
