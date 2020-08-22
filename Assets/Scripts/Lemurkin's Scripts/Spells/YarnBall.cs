@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScratchingPost : Spell
+public class YarnBall : Spell
 {
-
-       public override IEnumerator Cast(Transform target)
+    
+    public override IEnumerator Cast(Transform target)
     {
 
         return null;
