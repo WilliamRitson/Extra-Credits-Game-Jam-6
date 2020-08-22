@@ -6,8 +6,6 @@ public class Projectile2D : MonoBehaviour
 {
     public int damage;
     public Element damageType;
-    public int stunDuration;
-    public int hyperDuration;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
