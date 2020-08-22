@@ -24,7 +24,7 @@ public class Cat : MonoBehaviour
     private float HyperDuration = 0;
     public float hyperMultiplier = 2;
 
-    private enum State {
+    public enum State {
         Neutral,
         Hyper,
         Stunned
@@ -150,6 +150,19 @@ public class Cat : MonoBehaviour
         }
         Debug.Log($"Closest point to {positionY} is {best}.");
         return best;
+    }
+
+    public void ApplyStatusEffect(float duration, State type)
+    {
+        switch (type)
+        {
+            case State.Hyper:
+                HyperDuration += duration;
+                break;
+            case State.Stunned:
+                StunnedDuration += duration;
+                break;
+        }
     }
 
     private void Move(float multiplier)
