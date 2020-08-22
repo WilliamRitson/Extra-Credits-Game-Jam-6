@@ -44,7 +44,7 @@ public class Cat : MonoBehaviour
 
             // When we reach a destination stop moving and take an action
             movingTowards = GetNextMovementLoc();
-            StartCoroutine(TakeAction());
+            StartCoroutine(TakeAction(1));
         }
 
         if (StunnedDuration > 0)
@@ -69,15 +69,14 @@ public class Cat : MonoBehaviour
 
                 // When we reach a destination stop moving and take an action
                 movingTowards = GetNextMovementLoc();
-                //TOOO: This spell should potentially be faster by the rate of HyperMultiplier
-                StartCoroutine(TakeAction());
+                StartCoroutine(TakeAction(hyperMultiplier));
             }
             
         } 
 
     }
 
-    private IEnumerator TakeAction()
+    private IEnumerator TakeAction(float CastRate)
     {
         CatAction toPerform = actions[Random.Range(0, actions.Length)];
         MovingTextManager.Instance.ShowMessage(toPerform.abilityTitle, transform.position, Color.white);
@@ -87,7 +86,7 @@ public class Cat : MonoBehaviour
             audioSource.Play();
         }
         takeingAction = true;
-        yield return toPerform.Perform(firePoint);
+        yield return toPerform.Perform(firePoint, 1);
         takeingAction = false;
     }
 

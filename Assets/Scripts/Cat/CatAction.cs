@@ -5,5 +5,5 @@ public abstract class CatAction : MonoBehaviour
 {
     public string abilityTitle;
     public AudioClip soundEffect;
-    public abstract IEnumerator Perform(Transform target);
+    public abstract IEnumerator Perform(Transform target, float Speed);
 }
