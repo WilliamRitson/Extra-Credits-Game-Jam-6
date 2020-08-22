@@ -21,8 +21,8 @@ public class Cat : MonoBehaviour
     //Might be a better way to do this
     private float hyperDamage = 0;
 
+    private float timeElapsed = 0;
     private Damageable damageScript;
-
     private CatAction[] actions;
     private bool takeingAction = false;
     private float StunnedDuration = 0;
@@ -52,6 +52,10 @@ public class Cat : MonoBehaviour
     private void Update()
     {
         ReduceDurations();
+
+        //Difficulty scaling functionality
+        timeElapsed += Time.deltaTime;
+        CatSpeed = (timeElapsed / 100) + 1;
 
         // If we are doing something don't move
         if (takeingAction) return;
