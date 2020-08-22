@@ -267,6 +267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   damageType: 4
+  stunDuration: 0
+  hyperDuration: 0
 --- !u!1 &8297575352515258527
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +280,7 @@ GameObject:
   - component: {fileID: 4975533504288169813}
   - component: {fileID: 1658043312559353460}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

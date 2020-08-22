@@ -367,6 +367,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &788879922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 472432619253661610, guid: 2d1da8d0d025c1945a423ee71bb3fd67,
+    type: 3}
+  m_PrefabInstance: {fileID: 227716410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &788879932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788879922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fddb349fa1c421d8dfd281ebc7f207f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaCost: 10
+  spellName: Illusory Kitten
+  spellIcon: {fileID: 21300000, guid: 47163593c2023594ba9868d911df24e7, type: 3}
+  toSummon: {fileID: 3032934453739420915, guid: 12f110f1f9b79e44bbb10d18c82ccf52,
+    type: 3}
+  castDelay: 0
+--- !u!114 &788879933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788879922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fddb349fa1c421d8dfd281ebc7f207f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaCost: 6
+  spellName: Catnip
+  spellIcon: {fileID: 21300000, guid: 3d0bc621040c1f44c99a2f17e8a53657, type: 3}
+  toSummon: {fileID: 3553101385589260721, guid: 19a68bf8a63215348b055c290b15001a,
+    type: 3}
+  castDelay: 0
 --- !u!114 &825482629 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1166225357, guid: 9cf0e0e7c8eeb22408216c698de5caa5,
@@ -512,7 +554,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 227716410}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 788879922}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4a8c2b12a7ea214188b677d7f431ed0, type: 3}

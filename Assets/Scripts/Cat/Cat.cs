@@ -28,7 +28,7 @@ public class Cat : MonoBehaviour
         Neutral,
         Hyper,
         Stunned
-        }
+    }
 
     private State catState = State.Neutral;
 

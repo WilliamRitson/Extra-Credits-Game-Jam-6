@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 
 public class SpellBarUI : MonoBehaviour
@@ -8,7 +9,8 @@ public class SpellBarUI : MonoBehaviour
 
     private void Start()
     {
-        var spells = player.gameObject.GetComponents<Spell>();
+        var spells = player.gameObject.GetComponents<Spell>()
+            .OrderBy(spell => spell.manaCost);
         foreach (var spell in spells)
         {
             CreateSpellPanel(spell);
