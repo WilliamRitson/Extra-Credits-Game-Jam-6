@@ -45,6 +45,7 @@ public class Cat : MonoBehaviour
     {
         CatAction toPerform = actions[Random.Range(0, actions.Length)];
         Debug.Log("Use action: " + toPerform.abilityTitle);
+        MovingTextManager.Instance.ShowMessage(toPerform.abilityTitle, transform.position, Color.white);
         if (toPerform.soundEffect != null)
         {
             audioSource.clip = toPerform.soundEffect;

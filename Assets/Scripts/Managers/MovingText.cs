@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MovingText : MonoBehaviour
 {
-    public string text;
     public float speed;
-    public Text uiText;
+    public TextMeshProUGUI uiText;
     public Vector2 direction;
     public float fadeTime;
     private float startTime;
@@ -20,7 +20,7 @@ public class MovingText : MonoBehaviour
     void Update()
     {
         fadeTime -= Time.deltaTime;
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(direction * (speed * Time.deltaTime));
         var faded = uiText.color;
         faded.a = fadeTime / startTime;
         uiText.color = faded;
