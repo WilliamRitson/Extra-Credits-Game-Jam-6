@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Will's Test Scene.unity
     guid: 03e9f988328d1ad49a6cad605e43f174
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: b458b723f24a02447923fdd983bfbc82
   m_configObjects: {}

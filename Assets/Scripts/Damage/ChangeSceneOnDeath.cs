@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeSceneOnDeath : OnDeathBehavior
 {
     [SerializeField] private float delay;
-    public int startSceneBuildIndex;
+    public string sceneName;
 
     protected override void OnDeath()
     {
@@ -17,6 +17,6 @@ public class ChangeSceneOnDeath : OnDeathBehavior
     private IEnumerator LoadStartScene()
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(startSceneBuildIndex);
+        SceneManager.LoadScene(sceneName);
     }
 }
