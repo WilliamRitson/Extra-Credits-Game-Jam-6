@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 
 public class Cat : MonoBehaviour
 {
+
+    public float CatSpeed = 1;
     public Transform firePoint;
     public Transform[] movementPoints;
     private readonly Dictionary<Transform, int> movementPointAttraction = new Dictionary<Transform, int>();
@@ -15,6 +17,9 @@ public class Cat : MonoBehaviour
     private int moveDir = 1;
     private Vector3 movingTowards;
     private AudioSource audioSource;
+
+    //Might be a better way to do this
+    private float hyperDamage = 0;
 
     private Damageable damageScript;
 
@@ -54,10 +59,16 @@ public class Cat : MonoBehaviour
         switch (GetCurrentState())
         {
             case State.Neutral:
-                Move(1);
+                Move(CatSpeed);
                 break;
             case State.Hyper:
-                Move(hyperMultiplier);
+                hyperDamage += Time.deltaTime;
+                if (hyperDamage >= 1)
+                {
+                    hyperDamage -= 1;
+                    damageScript.TakeDamage(1, Element.OnlyDamageDefense);
+                }
+                Move(hyperMultiplier * CatSpeed);
                 break;
         }
 
