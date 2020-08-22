@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class Player : MonoBehaviour
     public Mana mana;
     public Sprite playerSprite;
     public float speed = 1;
+    public Spell[] spells = new Spell[6];
+    public Button buttonPrefab;
+
 
     public void Update()
     {
@@ -37,6 +42,21 @@ public class Player : MonoBehaviour
             mana.currentMana -= spell.manaCost;
             spell.Cast(position);
         }
+
+    }
+
+    public void Awake()
+    {
+
+        //Create existing spells
+        for (int i = 0; i < spells.Length; i++)
+        {
+            createSpell(spells[i]);
+        }
+    }
+
+    private void createSpell(Spell spell)
+    {
 
     }
 
