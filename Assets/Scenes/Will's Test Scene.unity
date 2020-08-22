@@ -470,10 +470,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1794193593, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
-      propertyPath: soundEffect
-      value: 
-      objectReference: {fileID: 8300000, guid: 65c3bddaf0ce8e24db4359ec7bc2ddcc, type: 3}
     - target: {fileID: 1794193596, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
       propertyPath: movementPoints.Array.data[0]
       value: 

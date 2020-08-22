@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 5214123154867442260}
   - component: {fileID: 304067299}
   - component: {fileID: 304067300}
+  - component: {fileID: -3471402147066838126}
   m_Layer: 0
   m_Name: Scratch Post
   m_TagString: Untagged
@@ -251,6 +252,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c1b8836f0c9c64795f3663bff24246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3471402147066838126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971752180545962193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ba39cfa1044a5885c3491c39cd8906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weakness: 0
+  multiplier: 0.5
 --- !u!1001 &6988584909230224650
 PrefabInstance:
   m_ObjectHideFlags: 0
