@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8281902919369683277}
   - component: {fileID: 5060941892180073531}
   - component: {fileID: 2247562615487304920}
+  - component: {fileID: 1594755543}
+  - component: {fileID: 1594755544}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -33,6 +35,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4804579582044146024}
+  - {fileID: 707144904231073513}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,9 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 472432619253661615}
-  mana: {fileID: 0}
-  playerSprite: {fileID: 21300000, guid: 288a6354be2203c4589db198c7ceb65f, type: 3}
+  mana: {fileID: 1594755544}
   speed: 1
+  castPoint: {fileID: 707144904231073513}
 --- !u!114 &8281902919369683277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +157,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c1b8836f0c9c64795f3663bff24246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1594755543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472432619253661610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fddb349fa1c421d8dfd281ebc7f207f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaCost: 4
+  spellName: Scratching Post
+  spellIcon: {fileID: 21300000, guid: 51729639ca49cc14eb3011fdda199862, type: 3}
+  toSummon: {fileID: 6971752180545962193, guid: 3d03859d47b7a534e9b302815e74a7c1,
+    type: 3}
+  castDelay: 0
+--- !u!114 &1594755544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472432619253661610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9dc6d583c596434b888a835d793cd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outputText: {fileID: 0}
+  currentMana: 5
+  manaCapacity: 10
+  manaRegenration: 1
 --- !u!1 &1286228184498327199
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.43, y: 1.63}
+  m_AnchoredPosition: {x: 0.09, y: 1.63}
   m_SizeDelta: {x: 232.96909, y: 44.05246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5701371120340599577
@@ -268,6 +305,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meter: {fileID: 5785643079381083870}
   damagable: {fileID: 8281902919369683277}
+--- !u!1 &2143986414537775292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 707144904231073513}
+  m_Layer: 0
+  m_Name: Cast Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &707144904231073513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143986414537775292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.53, y: -0.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 472432619253661615}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5449368908338577183
 PrefabInstance:
   m_ObjectHideFlags: 0

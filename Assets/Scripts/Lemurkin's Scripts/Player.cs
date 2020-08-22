@@ -9,10 +9,8 @@ public class Player : MonoBehaviour
 
     public Transform position;
     public Mana mana;
-    public Sprite playerSprite;
     public float speed = 1;
-    public Spell[] spells = new Spell[6];
-    public Button buttonPrefab;
+    public Transform castPoint;
 
 
     public void Update()
@@ -29,35 +27,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    public bool canCastSpell(Spell spell)
+    public bool CanCastSpell(Spell spell)
     {
         return (mana.currentMana >= spell.manaCost);
     }
 
     public void AttemptToCastSpell(Spell spell)
     {
-
-        if (mana.currentMana >= spell.manaCost)
-        {
-            mana.currentMana -= spell.manaCost;
-            spell.Cast(position);
-        }
-
+        if (!CanCastSpell(spell)) return;
+        MovingTextManager.Instance.ShowMessage(spell.spellName, transform.position, Color.white);
+        mana.currentMana -= spell.manaCost;
+        StartCoroutine(spell.Cast(castPoint));
     }
 
-    public void Awake()
-    {
-
-        //Create existing spells
-        for (int i = 0; i < spells.Length; i++)
-        {
-            createSpell(spells[i]);
-        }
-    }
-
-    private void createSpell(Spell spell)
-    {
-
-    }
 
 }

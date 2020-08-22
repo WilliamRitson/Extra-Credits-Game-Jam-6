@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Mana : MonoBehaviour
 {
-    public Text outputText;
+    public TextMeshProUGUI outputText;
     public float currentMana = 0;
     public float manaCapacity = 10;
     public float manaRegenration = 1;

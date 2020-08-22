@@ -44,7 +44,6 @@ public class Cat : MonoBehaviour
     private IEnumerator TakeAction()
     {
         CatAction toPerform = actions[Random.Range(0, actions.Length)];
-        Debug.Log("Use action: " + toPerform.abilityTitle);
         MovingTextManager.Instance.ShowMessage(toPerform.abilityTitle, transform.position, Color.white);
         if (toPerform.soundEffect != null)
         {
