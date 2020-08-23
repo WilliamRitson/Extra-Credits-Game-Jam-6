@@ -312,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 2
   hyperDps: 1
-  baseSpeed: 2
+  baseSpeed: 1
   firePoint: {fileID: 99853938917118515}
   movementPoints:
   - {fileID: 0}
@@ -364,7 +364,7 @@ MonoBehaviour:
   frequency: 0
   abilityTitle: Scratch
   soundEffect: {fileID: 8300000, guid: b239d8ae782142041a76b5a7382e704e, type: 3}
-  projectile: {fileID: 8471719469245231904, guid: 9a2a381ae82ca5a448a90db4f23d039a,
+  projectile: {fileID: 4111473037356485245, guid: 7916fa0275d96414093cfdd8bbb02482,
     type: 3}
   timeToPerform: 2
 --- !u!114 &558403176018070349

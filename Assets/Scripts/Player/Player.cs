@@ -7,13 +7,17 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-    public Transform position;
     public Mana mana;
     public float speed = 1;
     public Transform castPoint;
+    private AudioSource audioSource;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
-    public void Update()
+    private void Update()
     {
 
         if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) )&& transform.position.y <= 2.5)
@@ -36,6 +40,8 @@ public class Player : MonoBehaviour
     {
         if (!CanCastSpell(spell)) return;
         MovingTextManager.Instance.ShowMessage(spell.spellName, transform.position, Color.white);
+        audioSource.clip = spell.soundEffect;
+        audioSource.Play();
         mana.currentMana -= spell.manaCost;
         StartCoroutine(spell.Cast(castPoint));
     }

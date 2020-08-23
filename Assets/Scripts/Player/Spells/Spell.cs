@@ -9,5 +9,6 @@ public abstract class Spell : MonoBehaviour
     [TextArea]
     public string tooltip;
     public Sprite spellIcon;
+    public AudioClip soundEffect;
     abstract public IEnumerator Cast(Transform target);
 }
