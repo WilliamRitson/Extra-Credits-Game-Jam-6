@@ -20,7 +20,6 @@ public class SpellPanelUI : MonoBehaviour
     {
         if (caster == null) return;
         caster.AttemptToCastSpell(spell);
-        
     }
 
     public void BindSpell(Player newCaster, Spell newSpell)
