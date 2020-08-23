@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472432619253661615}
-  - component: {fileID: 472432619253661609}
-  - component: {fileID: 8281902919369683277}
   - component: {fileID: 5060941892180073531}
-  - component: {fileID: 1594755543}
+  - component: {fileID: 472432619253661609}
   - component: {fileID: 1594755544}
+  - component: {fileID: 8281902919369683277}
+  - component: {fileID: 1594755543}
   - component: {fileID: 1594755545}
   - component: {fileID: 788879931}
   - component: {fileID: 788879932}
@@ -45,36 +45,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &472432619253661609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472432619253661610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4a8c2b12a7ea214188b677d7f431ed0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {fileID: 472432619253661615}
-  mana: {fileID: 1594755544}
-  speed: 1
-  castPoint: {fileID: 707144904231073513}
---- !u!114 &8281902919369683277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472432619253661610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6099cb4a579b9b4d9f8f27dcef8d6b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maximumLife: 10
-  currentLife: 10
 --- !u!61 &5060941892180073531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -101,6 +71,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4899807, y: 1.7816372}
   m_EdgeRadius: 0
+--- !u!114 &472432619253661609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472432619253661610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a8c2b12a7ea214188b677d7f431ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {fileID: 472432619253661615}
+  mana: {fileID: 1594755544}
+  speed: 1.2
+  castPoint: {fileID: 707144904231073513}
+--- !u!114 &1594755544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472432619253661610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9dc6d583c596434b888a835d793cd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outputText: {fileID: 0}
+  currentMana: 5
+  manaCapacity: 30
+  manaRegeneration: 1.3
+--- !u!114 &8281902919369683277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472432619253661610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6099cb4a579b9b4d9f8f27dcef8d6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maximumLife: 10
+  currentLife: 10
 --- !u!114 &1594755543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,22 +137,6 @@ MonoBehaviour:
   toSummon: {fileID: 6971752180545962193, guid: 3d03859d47b7a534e9b302815e74a7c1,
     type: 3}
   castDelay: 0
---- !u!114 &1594755544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472432619253661610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9dc6d583c596434b888a835d793cd67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outputText: {fileID: 0}
-  currentMana: 5
-  manaCapacity: 30
-  manaRegenration: 1
 --- !u!114 &1594755545
 MonoBehaviour:
   m_ObjectHideFlags: 0
