@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
@@ -15,10 +16,9 @@ public class Cat : MonoBehaviour
     public Transform[] movementPoints;
     private readonly Dictionary<Transform, int> movementPointAttraction = new Dictionary<Transform, int>();
     public float speed = 2;
-    private int nextMovementPoint = 0;
-    private int moveDir = 1;
     private Vector3 movingTowards;
     private AudioSource audioSource;
+    private List<CatAction> intentions = new List<CatAction>();
 
     //TMP, only for testing
     public TextMeshProUGUI CatSpeedText;
@@ -52,6 +52,7 @@ public class Cat : MonoBehaviour
         {
             movementPointAttraction[point] = 1;
         }
+        AddIntention();
     }
 
     private void Update()
@@ -125,7 +126,10 @@ public class Cat : MonoBehaviour
 
     private IEnumerator TakeAction(float CastRate)
     {
-        CatAction toPerform = actions[Random.Range(0, actions.Length)];
+        CatAction toPerform = intentions[0];
+        intentions.RemoveAt(0);
+        AddIntention();
+        
         MovingTextManager.Instance.ShowMessage(toPerform.abilityTitle, transform.position, Color.white);
         if (toPerform.soundEffect != null)
         {
@@ -137,12 +141,42 @@ public class Cat : MonoBehaviour
         takeingAction = false;
     }
 
+    private void AddIntention()
+    {
+        intentions.Add(GenerateIntention());
+    }
+    
+    private CatAction GenerateIntention()
+    {
+        var tickets = new List<CatAction>();
+        foreach (var action in actions)
+        {
+            for (var i = 0; i < GetTicketsForAction(action); i++)
+            {
+                tickets.Add(action);
+            }
+        }
+        return tickets[Random.Range(0, tickets.Count)];
+    }
+
+    private int GetTicketsForAction(CatAction action)
+    {
+        switch (action.frequency)
+        {
+            case ActionFrequency.Common:
+                return 3;
+            case ActionFrequency.Rare:
+                return 1;
+        }
+        return 0;
+    }
+
+
     private Vector3 GetNextMovementLoc()
     {
         var tickets = new List<Vector3>();
         foreach (var point in movementPoints)
         {
-            Debug.Log($"Attraction to point {point} is {movementPointAttraction[point]}.");
             for (var i = 0; i < movementPointAttraction[point]; i++)
             {
                 tickets.Add(point.position);
@@ -202,5 +236,10 @@ public class Cat : MonoBehaviour
         // When we reach a destination stop moving and take an action
         movingTowards = GetNextMovementLoc();
         StartCoroutine(TakeAction(multiplier));
+    }
+
+    public void SetNextIntention(CatAction nextAction)
+    {
+        intentions[0] = nextAction;
     }
 }

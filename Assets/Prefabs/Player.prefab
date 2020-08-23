@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fddb349fa1c421d8dfd281ebc7f207f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 6
+  manaCost: 4
   spellName: Yarn Ball
   spellIcon: {fileID: 21300000, guid: f55cf3c3437235a45859be482347c4d0, type: 3}
   toSummon: {fileID: 1114456292802396483, guid: cb41c8c33d8043b40af7acec7a68311c,
