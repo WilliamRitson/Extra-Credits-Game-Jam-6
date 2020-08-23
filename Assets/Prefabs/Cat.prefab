@@ -363,7 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 0
   abilityTitle: Scratch
-  soundEffect: {fileID: 8300000, guid: ead0ab5763b4603449db0531b901c868, type: 3}
+  soundEffect: {fileID: 8300000, guid: b239d8ae782142041a76b5a7382e704e, type: 3}
   projectile: {fileID: 8471719469245231904, guid: 9a2a381ae82ca5a448a90db4f23d039a,
     type: 3}
   timeToPerform: 2
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 0
   abilityTitle: Mew
-  soundEffect: {fileID: 8300000, guid: 65c3bddaf0ce8e24db4359ec7bc2ddcc, type: 3}
+  soundEffect: {fileID: 8300000, guid: b4e7060c09f5b5d45b3bb5c49baf8a0c, type: 3}
   projectile: {fileID: 5436863414802728354, guid: 58a9094f675ac484996e0d35b3287aed,
     type: 3}
   timeToPerform: 1
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 0
   abilityTitle: Paw
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 783d9ba2871e1cf47844a0824c8696b2, type: 3}
   projectile: {fileID: 731741095820545812, guid: d73c75490c7399343adbee9b4e7635ac,
     type: 3}
   timeToPerform: 4
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 2
   abilityTitle: Furball
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: f4b4250ceaf3bfb43979d8e39e906237, type: 3}
   projectile: {fileID: 1183131743493644363, guid: 4eb9c2bf5f746414583503f261300aa7,
     type: 3}
   timeToPerform: 1
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 1
   abilityTitle: Butt-hole exposure! :o
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: f7bd87cfdd9ecf2439636ee4e795e8f6, type: 3}
   projectile: {fileID: 5605535154798982812, guid: 191e797d1a594234d86d972043839994,
     type: 3}
   timeToPerform: 6
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 0
   abilityTitle: Lick
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: e61c332f14497754f8b4f7c53910afcc, type: 3}
   projectile: {fileID: 8000936457808179361, guid: c73053d8e2f0f5a4b9ee84f6a097f595,
     type: 3}
   timeToPerform: 4
