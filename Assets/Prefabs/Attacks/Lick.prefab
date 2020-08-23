@@ -93,21 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6099cb4a579b9b4d9f8f27dcef8d6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumLife: 0
-  currentLife: 0
---- !u!114 &5482550999440672735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8000936457808179361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebbb90643b691da4191c0adecbb80a6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toSpawn: {fileID: 1183131743493644363, guid: 4eb9c2bf5f746414583503f261300aa7, type: 3}
+  maximumLife: 1
+  currentLife: 1
 --- !u!1001 &1916456093072982913
 PrefabInstance:
   m_ObjectHideFlags: 0
