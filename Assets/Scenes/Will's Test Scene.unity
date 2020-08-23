@@ -229,6 +229,10 @@ PrefabInstance:
       propertyPath: outputText
       value: 
       objectReference: {fileID: 825482629}
+    - target: {fileID: 1594755544, guid: 2d1da8d0d025c1945a423ee71bb3fd67, type: 3}
+      propertyPath: manaRegenration
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 472432619253661610, guid: 2d1da8d0d025c1945a423ee71bb3fd67,
         type: 3}
       propertyPath: m_Name
@@ -834,6 +838,10 @@ PrefabInstance:
       propertyPath: movementPoints.Array.data[3]
       value: 
       objectReference: {fileID: 2020941476}
+    - target: {fileID: 1794193596, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
+      propertyPath: baseSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2500625279112540713, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
         type: 3}
       propertyPath: m_Name
