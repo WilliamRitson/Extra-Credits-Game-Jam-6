@@ -11,25 +11,25 @@ using Random = UnityEngine.Random;
 public class Cat : MonoBehaviour
 {
 
-    public float CatSpeed = .5f;
+    public float movementSpeed = 2;
+    public float hyperDps = 1.0f;
+    public float baseSpeed = 2;
+
     public Transform firePoint;
     public Transform[] movementPoints;
+    public GameObject aura;
+    
     private readonly Dictionary<Transform, int> movementPointAttraction = new Dictionary<Transform, int>();
-    public float speed = 2;
     private Vector3 movingTowards;
     private AudioSource audioSource;
     private readonly List<CatAction> intentions = new List<CatAction>();
-    public float hyperDps = 1.0f;
-    public GameObject aura;
-
     private SpriteRenderer spriteRenderer;
-    
-    //Might be a better way to do this
-    private float hyperDamage = 0;
-
-    private float timeElapsed = 0;
     private Damageable damageable;
     private CatAction[] actions;
+    
+    private float hyperDamage = 0;
+    private float catSpeed;
+    private float timeElapsed = 0;
     private bool takingAction = false;
     private float stunnedDuration = 0;
     private float hyperDuration = 0;
@@ -59,7 +59,7 @@ public class Cat : MonoBehaviour
     {
         //Difficulty scaling functionality
         timeElapsed += Time.deltaTime;
-        CatSpeed = (timeElapsed / 300) + .5f;
+        catSpeed = (timeElapsed / 300) + baseSpeed;
 
         var state = GetCurrentState();
         TickStatusEffects(state);
@@ -68,7 +68,7 @@ public class Cat : MonoBehaviour
         if (takingAction || state == State.Stunned) return;
         
         var multiplier = state == State.Hyper ? hyperMultiplier : 1;
-        Move(CatSpeed * multiplier);
+        Move(catSpeed * multiplier);
     }
 
     void TickStatusEffects(State state)
@@ -238,7 +238,7 @@ public class Cat : MonoBehaviour
     {
         // Move towards the next location
         var position = transform.position;
-        Vector3 towardsTarget = (movingTowards - position).normalized * (Time.deltaTime * speed * multiplier);
+        Vector3 towardsTarget = (movingTowards - position).normalized * (Time.deltaTime * movementSpeed * multiplier);
         transform.position = position + towardsTarget;
 
         // Exit if we are not close enough to the destination
