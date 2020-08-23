@@ -639,6 +639,11 @@ PrefabInstance:
       propertyPath: movementPoints.Array.data[3]
       value: 
       objectReference: {fileID: 2020941476}
+    - target: {fileID: 424646713664787264, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2500625279112540713, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
         type: 3}
       propertyPath: m_Name
