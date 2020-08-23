@@ -210,7 +210,8 @@ AudioSource:
   m_GameObject: {fileID: 2500625279112540713}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5855109096197230676, guid: efd500665597021469ebe42248123a88,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 65c3bddaf0ce8e24db4359ec7bc2ddcc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -309,15 +310,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a4cde1a3604270842f66af237e4e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CatSpeed: 0.5
+  movementSpeed: 2
+  hyperDps: 1
+  baseSpeed: 2
   firePoint: {fileID: 99853938917118515}
   movementPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 2
-  hyperDps: 1
   aura: {fileID: 903827731}
   hyperMultiplier: 2
 --- !u!114 &1451697704
