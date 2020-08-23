@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 public enum MusicType
 {
-    Menu, Game, Victory
+    Menu, Game, Victory, Credits, GameOver
 }
 
 public class MusicRecord : MonoBehaviour
@@ -17,7 +17,7 @@ public class MusicRecord : MonoBehaviour
     private AudioClip currentLoop;
     
 
-    [FormerlySerializedAs("Source")] public AudioSource audioSource;
+    public AudioSource audioSource;
 
     private void Start()
     {
