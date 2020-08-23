@@ -18,18 +18,18 @@ public class Player : MonoBehaviour
 
         if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) )&& transform.position.y <= 2.5)
         {
-            transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up, speed/100);
+            transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up, speed * Time.deltaTime);
         }
 
         if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && transform.position.y >= -3.5)
         {
-            transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.down, speed/100);
+            transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.down, speed * Time.deltaTime);
         }
     }
 
     public bool CanCastSpell(Spell spell)
     {
-        return (mana.currentMana >= spell.manaCost);
+        return (mana.currentMana >= spell.manaCost && Time.timeScale > 0);
     }
 
     public void AttemptToCastSpell(Spell spell)
