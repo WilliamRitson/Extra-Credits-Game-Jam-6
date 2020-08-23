@@ -18,16 +18,16 @@ public class Cat : MonoBehaviour
     public float speed = 2;
     private Vector3 movingTowards;
     private AudioSource audioSource;
-    private List<CatAction> intentions = new List<CatAction>();
+    private readonly List<CatAction> intentions = new List<CatAction>();
+    public float hyperDps = 1.0f;
 
-    //TMP, only for testing
-    public TextMeshProUGUI CatSpeedText;
-
+    private SpriteRenderer spriteRenderer;
+    
     //Might be a better way to do this
     private float hyperDamage = 0;
 
     private float timeElapsed = 0;
-    private Damageable damageScript;
+    private Damageable damageable;
     private CatAction[] actions;
     private bool takeingAction = false;
     private float StunnedDuration = 0;
@@ -45,6 +45,8 @@ public class Cat : MonoBehaviour
 
     private void Start()
     {
+        damageable = GetComponent<Damageable>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         actions = GetComponents<CatAction>();
         movingTowards = movementPoints[0].position;
@@ -57,35 +59,47 @@ public class Cat : MonoBehaviour
 
     private void Update()
     {
-
-        //TMP, only for testing
-        CatSpeedText.text = "Cat Speed: " + CatSpeed;
-
-        ReduceDurations();
+        
 
         //Difficulty scaling functionality
         timeElapsed += Time.deltaTime;
         CatSpeed = (timeElapsed / 300) + .5f;
-
-        // If we are doing something don't move
-        if (takeingAction) return;
-
-        switch (GetCurrentState())
+        
+        ReduceDurations();
+        var state = GetCurrentState();
+        SetColor(state);
+        if (state == State.Hyper)
         {
-            case State.Neutral:
-                Move(CatSpeed);
-                break;
-            case State.Hyper:
-                hyperDamage += Time.deltaTime;
-                if (hyperDamage >= 1)
-                {
-                    hyperDamage -= 1;
-                    damageScript.TakeDamage(1, Element.OnlyDamageDefense);
-                }
-                Move(hyperMultiplier * CatSpeed);
-                break;
+            hyperDamage += Time.deltaTime * hyperDps;
+            Debug.Log(hyperDamage);
+            if (hyperDamage >= 1)
+            {
+                hyperDamage -= 1;
+                damageable.TakeDamage(1, Element.Distraction);
+            }
         }
 
+        // If we are doing something or stunned  don't move
+        if (takeingAction || state == State.Stunned) return;
+        
+        var multiplier = state == State.Hyper ? hyperMultiplier : 1;
+        Move(CatSpeed * multiplier);
+    }
+
+    private void SetColor(State state)
+    {
+        if (state == State.Hyper)
+        {
+            spriteRenderer.color = Color.red;
+        } else if (state == State.Stunned)
+        {
+            spriteRenderer.color = Color.blue;
+        }
+        else
+        {
+            spriteRenderer.color = Color.white;
+        }
+        
     }
 
 
@@ -108,7 +122,8 @@ public class Cat : MonoBehaviour
         if (StunnedDuration > 0)
         {
             StunnedDuration -= Time.deltaTime;
-        }else
+        }
+        else
         {
             StunnedDuration = 0;
         }
@@ -206,7 +221,6 @@ public class Cat : MonoBehaviour
             lowestDistance = dist;
             best = point;
         }
-        Debug.Log($"Closest point to {positionY} is {best}.");
         return best;
     }
 

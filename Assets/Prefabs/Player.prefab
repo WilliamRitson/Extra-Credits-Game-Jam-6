@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manaCost: 4
   spellName: Scratching Post
+  tooltip: 
   spellIcon: {fileID: 21300000, guid: 51729639ca49cc14eb3011fdda199862, type: 3}
   toSummon: {fileID: 6971752180545962193, guid: 3d03859d47b7a534e9b302815e74a7c1,
     type: 3}
@@ -149,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manaCost: 4
   spellName: Yarn Ball
+  tooltip: 
   spellIcon: {fileID: 21300000, guid: f55cf3c3437235a45859be482347c4d0, type: 3}
   toSummon: {fileID: 1114456292802396483, guid: cb41c8c33d8043b40af7acec7a68311c,
     type: 3}
@@ -167,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manaCost: 5
   spellName: Feather Duster
+  tooltip: 
   spellIcon: {fileID: 21300000, guid: ac3dc99c4ef1c3745a3f5fe866757f96, type: 3}
   toSummon: {fileID: 5471815320873224171, guid: a9ddbb4af0b2d464e8d94254fdf54c95,
     type: 3}
@@ -183,8 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fddb349fa1c421d8dfd281ebc7f207f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 10
+  manaCost: 8
   spellName: Illusory Kitten
+  tooltip: 
   spellIcon: {fileID: 21300000, guid: 47163593c2023594ba9868d911df24e7, type: 3}
   toSummon: {fileID: 3032934453739420915, guid: 12f110f1f9b79e44bbb10d18c82ccf52,
     type: 3}
@@ -203,6 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manaCost: 6
   spellName: Catnip
+  tooltip: 
   spellIcon: {fileID: 21300000, guid: 3d0bc621040c1f44c99a2f17e8a53657, type: 3}
   toSummon: {fileID: 3553101385589260721, guid: 19a68bf8a63215348b055c290b15001a,
     type: 3}

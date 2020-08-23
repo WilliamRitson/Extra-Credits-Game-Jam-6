@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4134270748475881077}
   m_Layer: 0
   m_Name: Scratch
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 4
   damageType: 0
+  friendTag: Attack
 --- !u!114 &4134270748475881077
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,9 +11,11 @@ public class SpellPanelUI : MonoBehaviour
     private Player caster;
 
     public TextMeshProUGUI title;
+    public TextMeshProUGUI tooltipText;
 
     public Image icon;
     public Button button;
+    
     public void OnClick()
     {
         if (caster == null) return;
@@ -26,10 +28,13 @@ public class SpellPanelUI : MonoBehaviour
         spell = newSpell;
         icon.sprite = newSpell.spellIcon;
         title.text = $"{newSpell.spellName} ({newSpell.manaCost})";
+        tooltipText.text = newSpell.tooltip;
     }
 
     private void Update()
     {
         button.interactable = caster != null && caster.CanCastSpell(spell);
     }
+    
+
 }
