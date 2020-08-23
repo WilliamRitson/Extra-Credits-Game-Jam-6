@@ -20,6 +20,7 @@ public class Cat : MonoBehaviour
     private AudioSource audioSource;
     private readonly List<CatAction> intentions = new List<CatAction>();
     public float hyperDps = 1.0f;
+    public GameObject aura;
 
     private SpriteRenderer spriteRenderer;
     
@@ -29,9 +30,9 @@ public class Cat : MonoBehaviour
     private float timeElapsed = 0;
     private Damageable damageable;
     private CatAction[] actions;
-    private bool takeingAction = false;
-    private float StunnedDuration = 0;
-    private float HyperDuration = 0;
+    private bool takingAction = false;
+    private float stunnedDuration = 0;
+    private float hyperDuration = 0;
     public float hyperMultiplier = 2;
 
     public enum State {
@@ -39,10 +40,7 @@ public class Cat : MonoBehaviour
         Hyper,
         Stunned
     }
-
-    private State catState = State.Neutral;
-
-
+    
     private void Start()
     {
         damageable = GetComponent<Damageable>();
@@ -59,57 +57,56 @@ public class Cat : MonoBehaviour
 
     private void Update()
     {
-        
-
         //Difficulty scaling functionality
         timeElapsed += Time.deltaTime;
         CatSpeed = (timeElapsed / 300) + .5f;
-        
-        ReduceDurations();
+
         var state = GetCurrentState();
-        SetColor(state);
-        if (state == State.Hyper)
-        {
-            hyperDamage += Time.deltaTime * hyperDps;
-            Debug.Log(hyperDamage);
-            if (hyperDamage >= 1)
-            {
-                hyperDamage -= 1;
-                damageable.TakeDamage(1, Element.Distraction);
-            }
-        }
+        TickStatusEffects(state);
 
         // If we are doing something or stunned  don't move
-        if (takeingAction || state == State.Stunned) return;
+        if (takingAction || state == State.Stunned) return;
         
         var multiplier = state == State.Hyper ? hyperMultiplier : 1;
         Move(CatSpeed * multiplier);
     }
 
-    private void SetColor(State state)
+    void TickStatusEffects(State state)
     {
-        if (state == State.Hyper)
+        ReduceDurations();
+        ApplyStatusVisualEffects(state);
+        if (state != State.Hyper) return;
+        hyperDamage += Time.deltaTime * hyperDps;
+        if (!(hyperDamage >= 1)) return;
+        hyperDamage -= 1;
+        damageable.TakeDamage(1, Element.Distraction);
+    }
+
+    private void ApplyStatusVisualEffects(State state)
+    {
+        aura.SetActive(state == State.Hyper);
+        switch (state)
         {
-            spriteRenderer.color = Color.red;
-        } else if (state == State.Stunned)
-        {
-            spriteRenderer.color = Color.blue;
+            case State.Hyper:
+                spriteRenderer.color = Color.red;
+                break;
+            case State.Stunned:
+                spriteRenderer.color = Color.blue;
+                break;
+            default:
+                spriteRenderer.color = Color.white;
+                break;
         }
-        else
-        {
-            spriteRenderer.color = Color.white;
-        }
-        
     }
 
 
     private State GetCurrentState()
     {
-        if (StunnedDuration > 0)
+        if (stunnedDuration > 0)
         {
             return State.Stunned;
         } 
-        if (HyperDuration > 0)
+        if (hyperDuration > 0)
         {
             return State.Hyper;
         }
@@ -119,22 +116,22 @@ public class Cat : MonoBehaviour
     private void ReduceDurations()
     {
 
-        if (StunnedDuration > 0)
+        if (stunnedDuration > 0)
         {
-            StunnedDuration -= Time.deltaTime;
+            stunnedDuration -= Time.deltaTime;
         }
         else
         {
-            StunnedDuration = 0;
+            stunnedDuration = 0;
         }
 
-        if (HyperDuration > 0)
+        if (hyperDuration > 0)
         {
-            HyperDuration -= Time.deltaTime;
+            hyperDuration -= Time.deltaTime;
         }
         else
         {
-            HyperDuration = 0;
+            hyperDuration = 0;
         }
     }
 
@@ -151,9 +148,9 @@ public class Cat : MonoBehaviour
             audioSource.clip = toPerform.soundEffect;
             audioSource.Play();
         }
-        takeingAction = true;
+        takingAction = true;
         yield return toPerform.Perform(firePoint, CastRate);
-        takeingAction = false;
+        takingAction = false;
     }
 
     private void AddIntention()
@@ -229,10 +226,10 @@ public class Cat : MonoBehaviour
         switch (type)
         {
             case State.Hyper:
-                HyperDuration += duration;
+                hyperDuration += duration;
                 break;
             case State.Stunned:
-                StunnedDuration += duration;
+                stunnedDuration += duration;
                 break;
         }
     }

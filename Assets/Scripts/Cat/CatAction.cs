@@ -13,5 +13,5 @@ public abstract class CatAction : MonoBehaviour
     public ActionFrequency frequency = ActionFrequency.Common;
     public string abilityTitle;
     public AudioClip soundEffect;
-    public abstract IEnumerator Perform(Transform target, float Speed);
+    public abstract IEnumerator Perform(Transform target, float speed);
 }

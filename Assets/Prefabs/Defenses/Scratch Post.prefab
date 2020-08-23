@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1117ebabb2a0db04bb2a617c6ec26acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
   damageType: 4
   friendTag: Defense
 --- !u!1 &8297575352515258527

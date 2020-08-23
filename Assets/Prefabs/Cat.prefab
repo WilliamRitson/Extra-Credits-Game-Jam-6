@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &903827731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903827732}
+  - component: {fileID: 903827733}
+  m_Layer: 0
+  m_Name: aura
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &903827732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903827731}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.03, y: 2.5, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children: []
+  m_Father: {fileID: 6908452303734932460}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &903827733
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903827731}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 045c1fef3ce3f864bbdb04ec03ba15b9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 7.47, y: 6.85}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2500625279112540713
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,6 +101,7 @@ GameObject:
   - component: {fileID: 1024665253544405202}
   - component: {fileID: 5075044537475893085}
   - component: {fileID: 1451697715}
+  - component: {fileID: 711564721}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Cat
@@ -39,6 +121,7 @@ Transform:
   m_LocalScale: {x: 0.17619811, y: 0.17619811, z: 0.17619811}
   m_Children:
   - {fileID: 99853938917118515}
+  - {fileID: 903827732}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -226,6 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a4cde1a3604270842f66af237e4e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CatSpeed: 0.5
   firePoint: {fileID: 99853938917118515}
   movementPoints:
   - {fileID: 0}
@@ -233,6 +317,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speed: 2
+  hyperDps: 1
+  aura: {fileID: 903827731}
   hyperMultiplier: 2
 --- !u!114 &1451697704
 MonoBehaviour:
@@ -274,6 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa73a5e30574376bf80cf78f6e59fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frequency: 0
   abilityTitle: Scratch
   soundEffect: {fileID: 8300000, guid: ead0ab5763b4603449db0531b901c868, type: 3}
   projectile: {fileID: 8471719469245231904, guid: 9a2a381ae82ca5a448a90db4f23d039a,
@@ -291,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa73a5e30574376bf80cf78f6e59fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frequency: 0
   abilityTitle: Mew
   soundEffect: {fileID: 8300000, guid: 65c3bddaf0ce8e24db4359ec7bc2ddcc, type: 3}
   projectile: {fileID: 5436863414802728354, guid: 58a9094f675ac484996e0d35b3287aed,
@@ -308,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa73a5e30574376bf80cf78f6e59fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frequency: 0
   abilityTitle: Paw
   soundEffect: {fileID: 0}
   projectile: {fileID: 731741095820545812, guid: d73c75490c7399343adbee9b4e7635ac,
@@ -325,11 +414,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa73a5e30574376bf80cf78f6e59fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityTitle: Lick
+  frequency: 2
+  abilityTitle: Furball
   soundEffect: {fileID: 0}
-  projectile: {fileID: 8000936457808179361, guid: c73053d8e2f0f5a4b9ee84f6a097f595,
+  projectile: {fileID: 1183131743493644363, guid: 4eb9c2bf5f746414583503f261300aa7,
     type: 3}
-  timeToPerform: 4
+  timeToPerform: 1
 --- !u!114 &1451697715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,11 +432,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df0fd2510e146ccaaad261e542ea04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frequency: 1
   abilityTitle: Butt-hole exposure! :o
   soundEffect: {fileID: 0}
   projectile: {fileID: 5605535154798982812, guid: 191e797d1a594234d86d972043839994,
     type: 3}
   timeToPerform: 6
+--- !u!114 &711564721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500625279112540713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093453eb2af24b03b1840485c0615177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 0
+  abilityTitle: Lick
+  soundEffect: {fileID: 0}
+  projectile: {fileID: 8000936457808179361, guid: c73053d8e2f0f5a4b9ee84f6a097f595,
+    type: 3}
+  timeToPerform: 4
+  nextIntention: Furball
 --- !u!1 &6996558938377914104
 GameObject:
   m_ObjectHideFlags: 0
