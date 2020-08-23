@@ -12,10 +12,6 @@ public class Damageable : MonoBehaviour
     [Tooltip("The initial amount of health this entity should start with.")]
     [SerializeField] private int currentLife;
     public int CurrentLife { get => currentLife; set => SetHealth(value); }
-
-    [Tooltip("The time in seconds the entity is invincible after taking damage")]
-    public float BaseInvincibilityTime = 0;
-    private float InvincibilityTime;
     
     /// <summary> An event fired when the entity hits 0 health. </summary>
     public event Action OnDeath;
@@ -29,15 +25,6 @@ public class Damageable : MonoBehaviour
 
     public delegate int DamageModifier(int damage, Element element);
     public readonly List<DamageModifier> Modifiers = new List<DamageModifier>();
-
-
-    public void Update()
-    {
-        if (isInvincible())
-        {
-            InvincibilityTime -= Time.deltaTime;
-        }
-    }
 
     /// <summary>Sets the health of this entity bounded between 0 and the maximumLife value.</summary>
     /// <returns>The change from the previous value.</returns>
@@ -89,30 +76,18 @@ public class Damageable : MonoBehaviour
     /// <returns>The change from the previous value.</returns>
     public int TakeDamage(int damage, Element element)
     {
-        if (!isInvincible())
+        var effectiveDamage = GetEffectiveDamage(damage, element);
+        var resultantDamage = SetHealth(currentLife - effectiveDamage);
+        if (resultantDamage > 0)
         {
-            var effectiveDamage = GetEffectiveDamage(damage, element);
-            var resultantDamage = SetHealth(currentLife - effectiveDamage);
-            if (resultantDamage > 0)
-            {
-                InvincibilityTime = BaseInvincibilityTime;
-                OnDamaged?.Invoke(resultantDamage);
-            }
-            return resultantDamage;
-        } else
-        {
-            return 0;
+            OnDamaged?.Invoke(resultantDamage);
         }
+        return resultantDamage;
     }
 
     public int Heal(int healAmount)
     {
         var healed = SetHealth(currentLife + healAmount);
         return healed;
-    }
-
-    public bool isInvincible()
-    {
-        return (InvincibilityTime > 0);
     }
 }
