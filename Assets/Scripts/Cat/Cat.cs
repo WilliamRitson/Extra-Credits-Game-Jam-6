@@ -2,13 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Cat : MonoBehaviour
 {
 
-    public float CatSpeed = 1;
+    public float CatSpeed = .5f;
     public Transform firePoint;
     public Transform[] movementPoints;
     private readonly Dictionary<Transform, int> movementPointAttraction = new Dictionary<Transform, int>();
@@ -17,6 +19,9 @@ public class Cat : MonoBehaviour
     private int moveDir = 1;
     private Vector3 movingTowards;
     private AudioSource audioSource;
+
+    //TMP, only for testing
+    public TextMeshProUGUI CatSpeedText;
 
     //Might be a better way to do this
     private float hyperDamage = 0;
@@ -51,11 +56,15 @@ public class Cat : MonoBehaviour
 
     private void Update()
     {
+
+        //TMP, only for testing
+        CatSpeedText.text = "Cat Speed: " + CatSpeed;
+
         ReduceDurations();
 
         //Difficulty scaling functionality
         timeElapsed += Time.deltaTime;
-        CatSpeed = (timeElapsed / 300) + 1;
+        CatSpeed = (timeElapsed / 300) + .5f;
 
         // If we are doing something don't move
         if (takeingAction) return;
