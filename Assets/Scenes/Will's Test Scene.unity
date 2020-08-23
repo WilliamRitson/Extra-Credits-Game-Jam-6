@@ -365,6 +365,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &711564709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2500625279112540713, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5439436716373900767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &711564721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711564709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093453eb2af24b03b1840485c0615177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 0
+  abilityTitle: Lick
+  soundEffect: {fileID: 0}
+  projectile: {fileID: 8000936457808179361, guid: c73053d8e2f0f5a4b9ee84f6a097f595,
+    type: 3}
+  timeToPerform: 4
+  nextIntention: Furball
 --- !u!114 &825482629 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1166225357, guid: 9cf0e0e7c8eeb22408216c698de5caa5,
@@ -395,7 +420,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5439436716373900767}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 711564709}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6099cb4a579b9b4d9f8f27dcef8d6b9, type: 3}
@@ -594,6 +619,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1451697715, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
+      propertyPath: frequency
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1794193596, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
       propertyPath: movementPoints.Array.data[0]
       value: 
@@ -614,6 +643,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075044537475893085, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
+        type: 3}
+      propertyPath: abilityTitle
+      value: Furball
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075044537475893085, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
+        type: 3}
+      propertyPath: frequency
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075044537475893085, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1183131743493644363, guid: 4eb9c2bf5f746414583503f261300aa7,
+        type: 3}
+    - target: {fileID: 5075044537475893085, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
+        type: 3}
+      propertyPath: timeToPerform
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6908452303734932460, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
         type: 3}

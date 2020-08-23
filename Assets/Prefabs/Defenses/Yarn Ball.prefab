@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: damage
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -2464339472630909117, guid: 3d03859d47b7a534e9b302815e74a7c1,
+        type: 3}
+      propertyPath: friendTag
+      value: Defense
+      objectReference: {fileID: 0}
     - target: {fileID: 304067299, guid: 3d03859d47b7a534e9b302815e74a7c1, type: 3}
       propertyPath: maximumLife
       value: 3

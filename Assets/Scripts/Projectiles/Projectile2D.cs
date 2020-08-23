@@ -6,9 +6,11 @@ public class Projectile2D : MonoBehaviour
 {
     public int damage;
     public Element damageType;
+    public string friendTag;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag(friendTag)) return;
         Damageable damageable = other.gameObject.GetComponent<Damageable>();
         if (!damageable) return;
         damageable.TakeDamage(damage, damageType);

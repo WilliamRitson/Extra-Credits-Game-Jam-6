@@ -59,7 +59,7 @@ public class Cat : MonoBehaviour
     {
 
         //TMP, only for testing
-        CatSpeedText.text = "Cat Speed: " + CatSpeed;
+        // CatSpeedText.text = "Cat Speed: " + CatSpeed;
 
         ReduceDurations();
 
