@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cat
   - Defense
+  - Attack
   layers:
   - Default
   - TransparentFX

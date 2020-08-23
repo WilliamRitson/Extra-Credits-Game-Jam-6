@@ -18,11 +18,8 @@ public class Cat : MonoBehaviour
     public float speed = 2;
     private Vector3 movingTowards;
     private AudioSource audioSource;
-    private List<CatAction> intentions = new List<CatAction>();
-
-    //TMP, only for testing
-    public TextMeshProUGUI CatSpeedText;
-
+    private readonly List<CatAction> intentions = new List<CatAction>();
+    
     //Might be a better way to do this
     private float hyperDamage = 0;
 
@@ -206,7 +203,6 @@ public class Cat : MonoBehaviour
             lowestDistance = dist;
             best = point;
         }
-        Debug.Log($"Closest point to {positionY} is {best}.");
         return best;
     }
 
