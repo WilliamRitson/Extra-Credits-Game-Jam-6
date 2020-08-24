@@ -18,7 +18,7 @@ public class TooltipActivator : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     private IEnumerator ActivateTooltipAfterDelay()
     {
-        yield return new WaitForSeconds(delayTime);
+        yield return new WaitForSecondsRealtime(delayTime);
         if (hovering)
             tooltip.SetActive(true);
     }

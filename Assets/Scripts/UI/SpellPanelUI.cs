@@ -27,7 +27,8 @@ public class SpellPanelUI : MonoBehaviour
         caster = newCaster;
         spell = newSpell;
         icon.sprite = newSpell.spellIcon;
-        title.text = $"{newSpell.spellName} ({newSpell.manaCost})";
+        //title.text = $"{newSpell.spellName} ({newSpell.manaCost})";
+        title.text = $"{newSpell.manaCost}";
         tooltipText.text = newSpell.tooltip;
     }
 
