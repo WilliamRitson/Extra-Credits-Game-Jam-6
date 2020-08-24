@@ -1,12 +1,13 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class SetDifficultyBehavior : MonoBehaviour
 {
-    public Difficulty difficulty;
     private Image bg;
+    public Text text;
 
     private void Start()
     {
@@ -15,13 +16,29 @@ public class SetDifficultyBehavior : MonoBehaviour
 
     private void Update()
     {
-        bg.color = (Options.difficulty == difficulty) ? Color.grey : Color.white;
+        text.text = "Current Difficulty: " + Options.difficulty;
     }
 
-    public void OnClick()
+    public void ChangeDifficulty()
     {
-        Debug.Log(difficulty);
-        Options.difficulty = difficulty;
+
+
+        switch (Options.difficulty)
+        {
+            case Difficulty.Easy:
+                Options.difficulty = Difficulty.Medium;
+                break;
+            case Difficulty.Medium:
+                Options.difficulty = Difficulty.Hard;
+                break;
+            case Difficulty.Hard:
+                Options.difficulty = Difficulty.Hyper;
+                break;
+            case Difficulty.Hyper:
+                Options.difficulty = Difficulty.Easy;
+                break;
+        }
+        Debug.Log(Options.difficulty);
     }
     
 }
