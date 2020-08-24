@@ -39,3 +39,4 @@ sysinfo.txt
 
 # IDE files
 .idea
+*.json
