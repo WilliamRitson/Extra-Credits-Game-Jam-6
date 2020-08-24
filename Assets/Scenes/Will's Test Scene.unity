@@ -873,6 +873,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7225363830573792458, guid: 9cf0e0e7c8eeb22408216c698de5caa5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 736.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225363830573792458, guid: 9cf0e0e7c8eeb22408216c698de5caa5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -34
+      objectReference: {fileID: 0}
     - target: {fileID: 7286270736723740004, guid: 9cf0e0e7c8eeb22408216c698de5caa5,
         type: 3}
       propertyPath: m_Color.a
