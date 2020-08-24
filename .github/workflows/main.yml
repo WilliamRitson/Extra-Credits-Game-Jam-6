@@ -6,7 +6,7 @@ on:
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
   BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-  ITCH_GAME: extra-credits-game-jam-6
+  ITCH_GAME: you-cat-to-be-kitten-me
   ITCH_USER: william-ritson
 
 jobs:
