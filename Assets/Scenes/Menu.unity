@@ -569,6 +569,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8612068953407814028, guid: 4d4a4e8081211a246ac3c3dd5c622482,
+        type: 3}
+      propertyPath: sceneName
+      value: Options
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612068953407814031, guid: 4d4a4e8081211a246ac3c3dd5c622482,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612068953407814031, guid: 4d4a4e8081211a246ac3c3dd5c622482,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8612068954536599877, guid: 4d4a4e8081211a246ac3c3dd5c622482,
         type: 3}
       propertyPath: m_Name
