@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float speed = 1;
     public Transform castPoint;
     private AudioSource audioSource;
+    public Transform[] targetPoints;
 
     private void Start()
     {
@@ -43,8 +44,23 @@ public class Player : MonoBehaviour
         audioSource.clip = spell.soundEffect;
         audioSource.Play();
         mana.currentMana -= spell.manaCost;
-        StartCoroutine(spell.Cast(castPoint));
+        StartCoroutine(spell.Cast(GetClosestTargetPoint(castPoint.position.y)));
     }
+    
+    private Transform GetClosestTargetPoint(float positionY)
+    {
+        float lowestDistance = float.PositiveInfinity;
+        Transform best = null;
+        foreach (var point in targetPoints)
+        {
+            var dist = Math.Abs(point.position.y - positionY);
+            if (dist >= lowestDistance) continue;
+            lowestDistance = dist;
+            best = point;
+        }
+        return best;
+    }
+
 
 
 }
