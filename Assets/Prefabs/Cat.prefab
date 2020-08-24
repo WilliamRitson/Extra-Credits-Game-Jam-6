@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 5075044537475893085}
   - component: {fileID: 1451697715}
   - component: {fileID: 711564721}
+  - component: {fileID: 570124775}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Cat
@@ -270,7 +271,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.0007415, y: -4.133484}
+  m_Offset: {x: 9.889564, y: -4.133484}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -281,7 +282,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.3969584, y: 144.72653}
+  m_Size: {x: 2.554884, y: 144.72653}
   m_EdgeRadius: 0
 --- !u!82 &1794193598
 AudioSource:
@@ -403,6 +404,10 @@ MonoBehaviour:
   - {fileID: 0}
   aura: {fileID: 903827731}
   kitten: {fileID: 1227758013}
+  intentionIndicators:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   hyperMultiplier: 2
 --- !u!114 &1451697704
 MonoBehaviour:
@@ -447,6 +452,7 @@ MonoBehaviour:
   frequency: 0
   abilityTitle: Scratch
   soundEffect: {fileID: 8300000, guid: b239d8ae782142041a76b5a7382e704e, type: 3}
+  intentionIcon: {fileID: 21300000, guid: e5b70da2a56168f4eb6defbf00c4d2a2, type: 3}
   projectile: {fileID: 4111473037356485245, guid: 7916fa0275d96414093cfdd8bbb02482,
     type: 3}
   timeToPerform: 2
@@ -465,6 +471,7 @@ MonoBehaviour:
   frequency: 0
   abilityTitle: Mew
   soundEffect: {fileID: 8300000, guid: b4e7060c09f5b5d45b3bb5c49baf8a0c, type: 3}
+  intentionIcon: {fileID: 21300000, guid: fd0f3270f2a505a4e8fccd8723ea9283, type: 3}
   projectile: {fileID: 5436863414802728354, guid: 58a9094f675ac484996e0d35b3287aed,
     type: 3}
   timeToPerform: 1
@@ -483,6 +490,7 @@ MonoBehaviour:
   frequency: 0
   abilityTitle: Paw
   soundEffect: {fileID: 8300000, guid: 783d9ba2871e1cf47844a0824c8696b2, type: 3}
+  intentionIcon: {fileID: 21300000, guid: 62526758f24d9ae4eb2a31dbec01ee60, type: 3}
   projectile: {fileID: 731741095820545812, guid: d73c75490c7399343adbee9b4e7635ac,
     type: 3}
   timeToPerform: 4
@@ -501,6 +509,7 @@ MonoBehaviour:
   frequency: 2
   abilityTitle: Furball
   soundEffect: {fileID: 8300000, guid: f4b4250ceaf3bfb43979d8e39e906237, type: 3}
+  intentionIcon: {fileID: 21300000, guid: 6b335b98046700c4b9d4eb182a62eda4, type: 3}
   projectile: {fileID: 1183131743493644363, guid: 4eb9c2bf5f746414583503f261300aa7,
     type: 3}
   timeToPerform: 1
@@ -519,6 +528,7 @@ MonoBehaviour:
   frequency: 1
   abilityTitle: Butt-hole exposure! :o
   soundEffect: {fileID: 8300000, guid: f7bd87cfdd9ecf2439636ee4e795e8f6, type: 3}
+  intentionIcon: {fileID: 21300000, guid: 0c1f4284b304e6b4b947e4e4366e95b0, type: 3}
   projectile: {fileID: 5605535154798982812, guid: 191e797d1a594234d86d972043839994,
     type: 3}
   timeToPerform: 6
@@ -537,10 +547,37 @@ MonoBehaviour:
   frequency: 0
   abilityTitle: Lick
   soundEffect: {fileID: 8300000, guid: e61c332f14497754f8b4f7c53910afcc, type: 3}
+  intentionIcon: {fileID: 21300000, guid: 544f48b4bad9682439bf7ba002e404dd, type: 3}
   projectile: {fileID: 8000936457808179361, guid: c73053d8e2f0f5a4b9ee84f6a097f595,
     type: 3}
   timeToPerform: 4
   nextIntention: Furball
+--- !u!61 &570124775
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500625279112540713}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18, y: 18}
+    newSize: {x: 18, y: 18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 18, y: 18}
+  m_EdgeRadius: 0
 --- !u!1 &6996558938377914104
 GameObject:
   m_ObjectHideFlags: 0

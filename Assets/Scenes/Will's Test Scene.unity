@@ -477,6 +477,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &570124762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2500625279112540713, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5439436716373900767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &570124775
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570124762}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18, y: 18}
+    newSize: {x: 18, y: 18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 18, y: 18}
+  m_EdgeRadius: 0
 --- !u!212 &658901321 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8800329750162381033, guid: 33099790633bc3842b979fee507f3871,
@@ -611,7 +643,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5439436716373900767}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 570124762}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6099cb4a579b9b4d9f8f27dcef8d6b9, type: 3}
@@ -935,20 +967,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 711564721, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
-      propertyPath: intentionIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: 544f48b4bad9682439bf7ba002e404dd,
-        type: 3}
-    - target: {fileID: 1451697715, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
-      propertyPath: intentionIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: 0c1f4284b304e6b4b947e4e4366e95b0,
-        type: 3}
-    - target: {fileID: 1794193596, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
-      propertyPath: intentionIndicators.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1794193596, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
       propertyPath: movementPoints.Array.data[0]
       value: 
@@ -977,29 +995,21 @@ PrefabInstance:
       propertyPath: intentionIndicators.Array.data[2]
       value: 
       objectReference: {fileID: 1033879826}
-    - target: {fileID: 558403176018070349, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
+    - target: {fileID: 756322181196274500, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
         type: 3}
-      propertyPath: intentionIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: fd0f3270f2a505a4e8fccd8723ea9283,
+      propertyPath: m_Offset.x
+      value: 9.889564
+      objectReference: {fileID: 0}
+    - target: {fileID: 756322181196274500, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
         type: 3}
-    - target: {fileID: 1024665253544405202, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
-        type: 3}
-      propertyPath: intentionIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: 62526758f24d9ae4eb2a31dbec01ee60,
-        type: 3}
+      propertyPath: m_Size.x
+      value: 2.554884
+      objectReference: {fileID: 0}
     - target: {fileID: 2500625279112540713, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
         type: 3}
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
-    - target: {fileID: 5075044537475893085, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
-        type: 3}
-      propertyPath: intentionIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: 6b335b98046700c4b9d4eb182a62eda4,
-        type: 3}
     - target: {fileID: 6908452303734932460, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1055,12 +1065,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7663125857836541460, guid: 7b8b6bc306d1cdd42828f92a2cc226b6,
-        type: 3}
-      propertyPath: intentionIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: e5b70da2a56168f4eb6defbf00c4d2a2,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b8b6bc306d1cdd42828f92a2cc226b6, type: 3}
 --- !u!1001 &7377817071158379735
