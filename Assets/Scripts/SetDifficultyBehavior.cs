@@ -20,6 +20,8 @@ public class SetDifficultyBehavior : MonoBehaviour
 
     public void OnClick()
     {
+        Debug.Log(difficulty);
         Options.difficulty = difficulty;
     }
+    
 }

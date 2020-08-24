@@ -11,7 +11,27 @@ public class Mana : MonoBehaviour
     public float currentMana;
     public float manaCapacity = 10;
     public float manaRegeneration = 1;
-    
+
+    public void Start()
+    {
+        if (Options.difficulty == Difficulty.Easy )
+        {
+            manaRegeneration = 1.3f;
+        }
+        else if (Options.difficulty == Difficulty.Medium)
+        {
+            manaRegeneration = 1.3f;
+        }
+        else if (Options.difficulty == Difficulty.Hard)
+        {
+            manaRegeneration = 1;
+        }
+        else if (Options.difficulty == Difficulty.Hyper)
+        {
+            manaRegeneration = 3f;
+        }
+    }
+
     private void Update()
     {
         if (currentMana <= manaCapacity)

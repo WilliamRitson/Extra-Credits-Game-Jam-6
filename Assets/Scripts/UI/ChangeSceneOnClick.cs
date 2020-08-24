@@ -9,6 +9,7 @@ public class ChangeSceneOnClick : MonoBehaviour
     public void OnClick()
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-    }    
+    }
 
+    
 }
