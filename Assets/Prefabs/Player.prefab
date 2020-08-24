@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 788879928}
   - component: {fileID: 788879930}
   - component: {fileID: 970987632}
+  - component: {fileID: 2969173584944217355}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -87,6 +88,7 @@ MonoBehaviour:
   mana: {fileID: 1594755544}
   speed: 3
   castPoint: {fileID: 707144904231073513}
+  targetPoints: []
 --- !u!114 &1594755544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +362,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2969173584944217355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472432619253661610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7907c4b84f1bf4f9d3c4b796f2de1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toSpawn: {fileID: 2127042996528587220, guid: 3b6575fb3a04ff446a578cc13016575b, type: 3}
 --- !u!1 &1030599666590841187
 GameObject:
   m_ObjectHideFlags: 0
