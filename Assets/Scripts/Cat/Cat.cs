@@ -50,6 +50,8 @@ public class Cat : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
+        damageable.MaximumLife = Options.GetCatHealth();
+        damageable.CurrentLife = Options.GetCatHealth();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         actions = GetComponents<CatAction>();
