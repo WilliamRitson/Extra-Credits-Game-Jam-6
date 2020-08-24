@@ -2978,7 +2978,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: EmissionModule.rateOverTime.scalar
-    value: 4
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: EmissionModule.rateOverTime.minScalar

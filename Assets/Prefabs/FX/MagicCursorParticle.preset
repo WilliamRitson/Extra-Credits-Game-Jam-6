@@ -3850,11 +3850,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: RotationModule.enabled
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: RotationModule.x.minMaxState
-    value: 0
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: RotationModule.x.scalar
@@ -4026,7 +4026,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: RotationModule.y.minMaxState
-    value: 0
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: RotationModule.y.scalar
@@ -4198,15 +4198,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: RotationModule.curve.minMaxState
-    value: 0
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: RotationModule.curve.scalar
-    value: 0.7853982
+    value: 1.7453293
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: RotationModule.curve.minScalar
-    value: 0.7853982
+    value: -1.7453293
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: RotationModule.curve.maxCurve.m_Curve.Array.size
