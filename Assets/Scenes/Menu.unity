@@ -214,7 +214,17 @@ PrefabInstance:
     - target: {fileID: 4164870221969398881, guid: 3671df3fe4ec0704e9426b0193681420,
         type: 3}
       propertyPath: Loop
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164870221969398881, guid: 3671df3fe4ec0704e9426b0193681420,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164870221969398881, guid: 3671df3fe4ec0704e9426b0193681420,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4164870221969398882, guid: 3671df3fe4ec0704e9426b0193681420,
         type: 3}
