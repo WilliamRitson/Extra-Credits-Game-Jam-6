@@ -12,10 +12,11 @@ public class SliderMusicScript : MonoBehaviour
 
     public GameObject AS;
 
-    private void Start()
+    private void Awake()
     {
         zlider = this.GetComponent<Slider>();
         AS = GameObject.Find("MusicManager");
+        zlider.value = AS.GetComponent<AudioSource>().volume;
     }
     void Update()
     {
