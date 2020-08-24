@@ -18,6 +18,7 @@ public class Cat : MonoBehaviour
     public Transform firePoint;
     public Transform[] movementPoints;
     public GameObject aura;
+    public GameObject kitten;
     
     private readonly Dictionary<Transform, int> movementPointAttraction = new Dictionary<Transform, int>();
     private Vector3 movingTowards;
@@ -85,13 +86,12 @@ public class Cat : MonoBehaviour
     private void ApplyStatusVisualEffects(State state)
     {
         aura.SetActive(state == State.Hyper);
+        kitten.SetActive(state == State.Stunned);
+        spriteRenderer.flipY = state == State.Stunned;
         switch (state)
         {
             case State.Hyper:
                 spriteRenderer.color = Color.red;
-                break;
-            case State.Stunned:
-                spriteRenderer.color = Color.blue;
                 break;
             default:
                 spriteRenderer.color = Color.white;
