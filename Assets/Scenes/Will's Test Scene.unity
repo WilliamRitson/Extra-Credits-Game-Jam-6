@@ -260,6 +260,11 @@ PrefabInstance:
       propertyPath: targetPoints.Array.data[3]
       value: 
       objectReference: {fileID: 1186603000}
+    - target: {fileID: 472432619253661609, guid: 2d1da8d0d025c1945a423ee71bb3fd67,
+        type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 472432619253661610, guid: 2d1da8d0d025c1945a423ee71bb3fd67,
         type: 3}
       propertyPath: m_Name
@@ -1195,6 +1200,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8800329749787496625, guid: 33099790633bc3842b979fee507f3871,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800329750162381032, guid: 33099790633bc3842b979fee507f3871,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.62
+      objectReference: {fileID: 0}
     - target: {fileID: 8800329751047591744, guid: 33099790633bc3842b979fee507f3871,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1254,6 +1269,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Intentions
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800329751517262000, guid: 33099790633bc3842b979fee507f3871,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.52
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33099790633bc3842b979fee507f3871, type: 3}
