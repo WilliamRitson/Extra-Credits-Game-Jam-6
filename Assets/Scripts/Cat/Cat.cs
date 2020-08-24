@@ -24,9 +24,11 @@ public class Cat : MonoBehaviour
     private Vector3 movingTowards;
     private AudioSource audioSource;
     private readonly List<CatAction> intentions = new List<CatAction>();
+    private readonly List<Vector3> moveIntentions = new List<Vector3>();
     private SpriteRenderer spriteRenderer;
     private Damageable damageable;
     private CatAction[] actions;
+    public SpriteRenderer[] intentionIndicators;
     
     private float hyperDamage = 0;
     private float catSpeed;
@@ -48,12 +50,28 @@ public class Cat : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         actions = GetComponents<CatAction>();
-        movingTowards = movementPoints[0].position;
         foreach (var point in movementPoints)
         {
             movementPointAttraction[point] = 1;
         }
-        AddIntention();
+
+        foreach (var _ in intentionIndicators)
+        {
+            AddIntention();
+        }
+        DrawIntentions();
+        movingTowards = moveIntentions[0];
+
+    }
+
+    private void DrawIntentions()
+    {
+        for (int i = 0; i < intentions.Count; i++)
+        {
+            intentionIndicators[i].sprite = intentions[i].intentionIcon;
+            var pos = intentionIndicators[i].gameObject.transform.position;
+            intentionIndicators[i].gameObject.transform.position = new Vector3(pos.x, moveIntentions[i].y, pos.z);
+        }
     }
 
     private void Update()
@@ -139,8 +157,7 @@ public class Cat : MonoBehaviour
     private IEnumerator TakeAction(float CastRate)
     {
         CatAction toPerform = intentions[0];
-        intentions.RemoveAt(0);
-        AddIntention();
+
         
         MovingTextManager.Instance.ShowMessage(toPerform.abilityTitle, transform.position, Color.white);
         if (toPerform.soundEffect != null)
@@ -151,11 +168,18 @@ public class Cat : MonoBehaviour
         takingAction = true;
         yield return toPerform.Perform(firePoint, CastRate);
         takingAction = false;
+        
+        intentions.RemoveAt(0);
+        moveIntentions.RemoveAt(0);
+        AddIntention();
+        DrawIntentions();
+        movingTowards = moveIntentions[0];
     }
 
     private void AddIntention()
     {
         intentions.Add(GenerateIntention());
+        moveIntentions.Add(GetNextMovementLoc());
     }
     
     private CatAction GenerateIntention()
@@ -200,6 +224,16 @@ public class Cat : MonoBehaviour
     public void RegisterAttractor(float positionY, int strength)
     {
         movementPointAttraction[GetClosestMovementPoint(positionY)] += strength;
+        
+        // Recompute cats intentions
+        for (int i = 0; i < moveIntentions.Count; i++)
+        {
+            moveIntentions[i] = GetNextMovementLoc();
+        }
+        DrawIntentions();
+
+        if (takingAction) return;
+        movingTowards = moveIntentions[0];
     }
 
     public void DeregisterAttractor(float positionY, int strength)
@@ -245,12 +279,12 @@ public class Cat : MonoBehaviour
         if (Vector3.Distance(transform.position, movingTowards) > 0.1) return;
 
         // When we reach a destination stop moving and take an action
-        movingTowards = GetNextMovementLoc();
         StartCoroutine(TakeAction(multiplier));
     }
 
     public void SetNextIntention(CatAction nextAction)
     {
-        intentions[0] = nextAction;
+        intentions[1] = nextAction;
+        DrawIntentions();
     }
 }
