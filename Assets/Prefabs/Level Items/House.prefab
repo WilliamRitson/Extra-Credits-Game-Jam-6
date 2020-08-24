@@ -211,8 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6099cb4a579b9b4d9f8f27dcef8d6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumLife: 50
-  currentLife: 50
+  maximumLife: 30
+  currentLife: 30
 --- !u!61 &3916282691547184357
 BoxCollider2D:
   m_ObjectHideFlags: 0
