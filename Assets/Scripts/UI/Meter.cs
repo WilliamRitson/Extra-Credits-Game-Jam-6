@@ -34,9 +34,9 @@ public class Meter : MonoBehaviour
     }
 
 
-    protected virtual void SetHealth(int newValue)
+    protected virtual void SetHealth(float newValue)
     {
-        readout.text = newValue + "/" + (int) max;
+        readout.text = (int)newValue + "/" + (int) max;
         fill.fillAmount = newValue / max ;
     }
 }

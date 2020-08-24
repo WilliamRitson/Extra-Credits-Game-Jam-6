@@ -13,7 +13,7 @@ public class PlaySoundOnDamage : OnDamageBehavior
         source.loop = false;
     }
     
-    protected override void OnDamaged(int damage)
+    protected override void OnDamaged(float damage)
     {
         if (source.isPlaying) return;
         source.clip = clips[Random.Range(0, clips.Length - 1)];

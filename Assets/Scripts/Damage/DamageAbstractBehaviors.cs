@@ -38,7 +38,7 @@ public abstract class OnDamageBehavior : MonoBehaviour
             damageable.OnDamaged -= OnDamaged;
     }
 
-    protected abstract void OnDamaged(int damage);
+    protected abstract void OnDamaged(float damage);
 }
 
 [RequireComponent(typeof(Damageable))]
@@ -57,5 +57,5 @@ public abstract class OnHealthChangeBehavior : MonoBehaviour
         damageable.OnHealthChange -= OnHealthChange;
     }
 
-    protected abstract void OnHealthChange(int health);
+    protected abstract void OnHealthChange(float health);
 }

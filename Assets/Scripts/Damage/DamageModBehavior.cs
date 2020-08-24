@@ -17,6 +17,6 @@ namespace Damage
             toModify.Modifiers.Remove(Modifier);
         }
 
-        protected abstract int Modifier(int damage, Element element);
+        protected abstract float Modifier(float damage, Element element);
     }
 }

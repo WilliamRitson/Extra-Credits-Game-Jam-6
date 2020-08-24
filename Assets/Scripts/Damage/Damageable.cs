@@ -6,29 +6,40 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     [Tooltip("The maximum health this entity can have.")]
-    [SerializeField] private int maximumLife;
-    public int MaximumLife { get => maximumLife; set => SetMaximumHealth(value); }
+    [SerializeField] private float maximumLife;
+    public float MaximumLife { get => maximumLife; set => SetMaximumHealth(value); }
 
     [Tooltip("The initial amount of health this entity should start with.")]
-    [SerializeField] private int currentLife;
-    public int CurrentLife { get => currentLife; set => SetHealth(value); }
-    
+    [SerializeField] private float currentLife;
+    public float CurrentLife { get => currentLife; set => SetHealth(value); }
+
+    [Tooltip("The amount of health regen this entity should receive.")]
+    public float HealthRegen;
+
     /// <summary> An event fired when the entity hits 0 health. </summary>
     public event Action OnDeath;
 
     /// <summary> An event fired whenever the entity's health changes. </summary>
-    public event Action<int> OnHealthChange;
+    public event Action<float> OnHealthChange;
 
     /// <summary> An event fired whenever the entity takes damage </summary>
-    public event Action<int> OnDamaged;
+    public event Action<float> OnDamaged;
 
 
-    public delegate int DamageModifier(int damage, Element element);
+    public delegate float DamageModifier(float damage, Element element);
     public readonly List<DamageModifier> Modifiers = new List<DamageModifier>();
+
+    void Update()
+    {
+        if(HealthRegen != 0 && CurrentLife < MaximumLife)
+        {
+            Heal(HealthRegen * Time.deltaTime);
+        }
+    }
 
     /// <summary>Sets the health of this entity bounded between 0 and the maximumLife value.</summary>
     /// <returns>The change from the previous value.</returns>
-    public int SetHealth(int newValue)
+    public float SetHealth(float newValue)
     {
         if (currentLife == newValue)
             return 0;
@@ -46,7 +57,7 @@ public class Damageable : MonoBehaviour
     /// <summary>Sets the health of this entity to a value greater than 0. 
     /// If the maximum health is less than the current health updates the current health to be the maximum health</summary>
     /// <returns>The change from the previous value.</returns>
-    public int SetMaximumHealth(int newValue)
+    public float SetMaximumHealth(float newValue)
     {
         if (currentLife == newValue)
             return 0;
@@ -59,7 +70,7 @@ public class Damageable : MonoBehaviour
         return previous - currentLife;
     }
 
-    private int GetEffectiveDamage(int damage, Element element)
+    private float GetEffectiveDamage(float damage, Element element)
     {
         var effective = damage;
 
@@ -74,7 +85,7 @@ public class Damageable : MonoBehaviour
 
     /// <summary>Reduces health by the given amount.</summary>
     /// <returns>The change from the previous value.</returns>
-    public int TakeDamage(int damage, Element element)
+    public float TakeDamage(float damage, Element element)
     {
         var effectiveDamage = GetEffectiveDamage(damage, element);
         var resultantDamage = SetHealth(currentLife - effectiveDamage);
@@ -85,7 +96,7 @@ public class Damageable : MonoBehaviour
         return resultantDamage;
     }
 
-    public int Heal(int healAmount)
+    public float Heal(float healAmount)
     {
         var healed = SetHealth(currentLife + healAmount);
         return healed;
