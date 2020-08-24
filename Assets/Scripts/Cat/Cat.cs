@@ -17,6 +17,7 @@ public class Cat : MonoBehaviour
 
     public Transform firePoint;
     public Transform[] movementPoints;
+    public SpriteRenderer[] intentionIndicators;
     public GameObject aura;
     public GameObject kitten;
     
@@ -28,7 +29,7 @@ public class Cat : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Damageable damageable;
     private CatAction[] actions;
-    public SpriteRenderer[] intentionIndicators;
+    private Animator animator;
     
     private float hyperDamage = 0;
     private float catSpeed;
@@ -37,6 +38,7 @@ public class Cat : MonoBehaviour
     private float stunnedDuration = 0;
     private float hyperDuration = 0;
     public float hyperMultiplier = 2;
+    private static readonly int Attack = Animator.StringToHash("Attack");
 
     public enum State {
         Neutral,
@@ -46,6 +48,7 @@ public class Cat : MonoBehaviour
     
     private void Start()
     {
+        animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
@@ -154,7 +157,7 @@ public class Cat : MonoBehaviour
     }
 
 
-    private IEnumerator TakeAction(float CastRate)
+    private IEnumerator TakeAction(float castRate)
     {
         CatAction toPerform = intentions[0];
 
@@ -166,7 +169,7 @@ public class Cat : MonoBehaviour
             audioSource.Play();
         }
         takingAction = true;
-        yield return toPerform.Perform(firePoint, CastRate);
+        yield return toPerform.Perform(firePoint, castRate, this);
         takingAction = false;
         
         intentions.RemoveAt(0);
@@ -280,6 +283,12 @@ public class Cat : MonoBehaviour
 
         // When we reach a destination stop moving and take an action
         StartCoroutine(TakeAction(multiplier));
+    }
+
+    public void AnimateAttack()
+    {
+        animator.SetTrigger(Attack);
+
     }
 
     public void SetNextIntention(CatAction nextAction)

@@ -14,5 +14,5 @@ public abstract class CatAction : MonoBehaviour
     public string abilityTitle;
     public AudioClip soundEffect;
     public Sprite intentionIcon;
-    public abstract IEnumerator Perform(Transform target, float speed);
+    public abstract IEnumerator Perform(Transform target, float speed, Cat cat);
 }

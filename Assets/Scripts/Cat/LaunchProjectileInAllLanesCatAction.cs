@@ -16,7 +16,7 @@ public class LaunchProjectileInAllLanesCatAction : CatAction
         cat = GetComponent<Cat>();
     }
 
-    public override IEnumerator Perform(Transform target, float speed)
+    public override IEnumerator Perform(Transform target, float speed, Cat cat)
     {
         yield return new WaitForSeconds(timeToPerform / 3 / speed);
         render.flipX = true;

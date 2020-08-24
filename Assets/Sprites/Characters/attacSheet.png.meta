@@ -1,12 +1,102 @@
 fileFormatVersion: 2
 guid: db8a2003a41df454fa55adaea1a79387
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7908004903803923145
+    second: attacSheet_0
+  - first:
+      213: 686106476191598140
+    second: attacSheet_1
+  - first:
+      213: -6772842552555162512
+    second: attacSheet_2
+  - first:
+      213: -8260679855897165308
+    second: attacSheet_3
+  - first:
+      213: -5513949651266673628
+    second: attacSheet_4
+  - first:
+      213: 767380429988785663
+    second: attacSheet_5
+  - first:
+      213: -2745203821554277212
+    second: attacSheet_6
+  - first:
+      213: 8736954156560598485
+    second: attacSheet_7
+  - first:
+      213: 4702330076392112696
+    second: attacSheet_8
+  - first:
+      213: -1724703602875695957
+    second: attacSheet_9
+  - first:
+      213: -6930188458892142507
+    second: attacSheet_10
+  - first:
+      213: 1859279612298719853
+    second: attacSheet_11
+  - first:
+      213: 7194855059602947517
+    second: attacSheet_12
+  - first:
+      213: 3044880679780919683
+    second: attacSheet_13
+  - first:
+      213: -2233798028964149683
+    second: attacSheet_14
+  - first:
+      213: -8558030064225181138
+    second: attacSheet_15
+  - first:
+      213: 8923517574813627779
+    second: attacSheet_16
+  - first:
+      213: 4718864187056055106
+    second: attacSheet_17
+  - first:
+      213: -5540409320956342977
+    second: attacSheet_18
+  - first:
+      213: -565483292543709975
+    second: attacSheet_19
+  - first:
+      213: -4796707273916019182
+    second: attacSheet_20
+  - first:
+      213: -9097379815248684552
+    second: attacSheet_21
+  - first:
+      213: -4769470160377903284
+    second: attacSheet_22
+  - first:
+      213: 1528999785155982757
+    second: attacSheet_23
+  - first:
+      213: 118417467651898193
+    second: attacSheet_24
+  - first:
+      213: 2662160024708251360
+    second: attacSheet_25
+  - first:
+      213: -8448067668698063670
+    second: attacSheet_26
+  - first:
+      213: -7646175580377950003
+    second: attacSheet_27
+  - first:
+      213: 4020872139132975080
+    second: attacSheet_28
+  - first:
+      213: 8229416674059881547
+    second: attacSheet_29
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,16 +121,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +139,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -71,13 +161,679 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: attacSheet_0
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 13798
+        width: 1630
+        height: 1639
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73558ba307f114290800000000000000
+      internalID: -7908004903803923145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_1
+      rect:
+        serializedVersion: 2
+        x: 3402
+        y: 13782
+        width: 1615
+        height: 1623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36ce77743a858900800000000000000
+      internalID: 686106476191598140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_2
+      rect:
+        serializedVersion: 2
+        x: 6075
+        y: 13767
+        width: 1607
+        height: 1599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074bc4f15970202a0800000000000000
+      internalID: -6772842552555162512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_3
+      rect:
+        serializedVersion: 2
+        x: 8755
+        y: 13751
+        width: 1592
+        height: 1576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4024602207b2c5d80800000000000000
+      internalID: -8260679855897165308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_4
+      rect:
+        serializedVersion: 2
+        x: 11428
+        y: 13822
+        width: 1607
+        height: 1434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4246cde91048a73b0800000000000000
+      internalID: -5513949651266673628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_5
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 11156
+        width: 1701
+        height: 1372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd61117f6846aa00800000000000000
+      internalID: 767380429988785663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3347
+        y: 11211
+        width: 1693
+        height: 1529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a466344ba317e9d0800000000000000
+      internalID: -2745203821554277212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_7
+      rect:
+        serializedVersion: 2
+        x: 6130
+        y: 11289
+        width: 1591
+        height: 1670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5caa8d385ef3970800000000000000
+      internalID: 8736954156560598485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_8
+      rect:
+        serializedVersion: 2
+        x: 8685
+        y: 11360
+        width: 1638
+        height: 1576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832ccfb5a48024140800000000000000
+      internalID: 4702330076392112696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_9
+      rect:
+        serializedVersion: 2
+        x: 11405
+        y: 11187
+        width: 1481
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacf1c7063f9018e0800000000000000
+      internalID: -1724703602875695957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_10
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 8428
+        width: 1458
+        height: 1678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558d839705603df90800000000000000
+      internalID: -6930188458892142507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_11
+      rect:
+        serializedVersion: 2
+        x: 3370
+        y: 8444
+        width: 1482
+        height: 1560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62f03dd4fc7dc910800000000000000
+      internalID: 1859279612298719853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_12
+      rect:
+        serializedVersion: 2
+        x: 6028
+        y: 8459
+        width: 1512
+        height: 1451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd3e068e8249d360800000000000000
+      internalID: 7194855059602947517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_13
+      rect:
+        serializedVersion: 2
+        x: 8693
+        y: 8475
+        width: 1528
+        height: 1364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389aac588d6914a20800000000000000
+      internalID: 3044880679780919683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_14
+      rect:
+        serializedVersion: 2
+        x: 11389
+        y: 8491
+        width: 1497
+        height: 1520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46cf9f1784fff0e0800000000000000
+      internalID: -2233798028964149683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_15
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 5825
+        width: 1458
+        height: 1654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22aebcbff4cb3980800000000000000
+      internalID: -8558030064225181138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_16
+      rect:
+        serializedVersion: 2
+        x: 3386
+        y: 5833
+        width: 1458
+        height: 1646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385b8b994f3b6db70800000000000000
+      internalID: 8923517574813627779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_17
+      rect:
+        serializedVersion: 2
+        x: 6059
+        y: 5833
+        width: 1458
+        height: 1646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243e9ccf9f5cc7140800000000000000
+      internalID: 4718864187056055106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_18
+      rect:
+        serializedVersion: 2
+        x: 8740
+        y: 5833
+        width: 1458
+        height: 1646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d4222b3138c13b0800000000000000
+      internalID: -5540409320956342977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_19
+      rect:
+        serializedVersion: 2
+        x: 11413
+        y: 5833
+        width: 1458
+        height: 1646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec838501fff628f0800000000000000
+      internalID: -565483292543709975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_20
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 3152
+        width: 1458
+        height: 1646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e04bef52cae6db0800000000000000
+      internalID: -4796707273916019182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_21
+      rect:
+        serializedVersion: 2
+        x: 3386
+        y: 3152
+        width: 1458
+        height: 1646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f91b4d024d9fb180800000000000000
+      internalID: -9097379815248684552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_22
+      rect:
+        serializedVersion: 2
+        x: 6059
+        y: 3152
+        width: 1458
+        height: 1646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4789dba8207fcdb0800000000000000
+      internalID: -4769470160377903284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_23
+      rect:
+        serializedVersion: 2
+        x: 8740
+        y: 3152
+        width: 1458
+        height: 1646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5fedf1439183510800000000000000
+      internalID: 1528999785155982757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_24
+      rect:
+        serializedVersion: 2
+        x: 11413
+        y: 3152
+        width: 1458
+        height: 1646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bb7963f04b4a100800000000000000
+      internalID: 118417467651898193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_25
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 478
+        width: 1458
+        height: 1647
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eefaff0074e1f420800000000000000
+      internalID: 2662160024708251360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_26
+      rect:
+        serializedVersion: 2
+        x: 3386
+        y: 478
+        width: 1458
+        height: 1647
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc1ac0173f62ca80800000000000000
+      internalID: -8448067668698063670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_27
+      rect:
+        serializedVersion: 2
+        x: 6059
+        y: 478
+        width: 1458
+        height: 1647
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc85e4122d353e590800000000000000
+      internalID: -7646175580377950003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_28
+      rect:
+        serializedVersion: 2
+        x: 8740
+        y: 478
+        width: 1458
+        height: 1647
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7394438e10dc730800000000000000
+      internalID: 4020872139132975080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacSheet_29
+      rect:
+        serializedVersion: 2
+        x: 11413
+        y: 478
+        width: 1458
+        height: 1647
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c040e1dd2c43270800000000000000
+      internalID: 8229416674059881547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e14758a665da6704a96321f4115da854
     internalID: 0
     vertices: []
     indices: 
