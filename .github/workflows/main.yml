@@ -74,3 +74,7 @@ jobs:
       env:
         CHANNEL: web
         PACKAGE: Build/WebGL
+    # Delete the artifact after we upload it to itch.io
+    - uses: geekyeggo/delete-artifact@v1
+      with:
+        name: build
