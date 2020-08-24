@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: -2464339472630909117}
   - component: {fileID: -190194291131180101}
   - component: {fileID: 2537981004697114390}
+  - component: {fileID: 6500003615520666187}
   m_Layer: 0
   m_Name: Scratch Post
   m_TagString: Defense
@@ -5041,6 +5042,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6500003615520666187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971752180545962193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7907c4b84f1bf4f9d3c4b796f2de1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toSpawn: {fileID: 1240914762696690802, guid: 01f3f0093b873c4429f51c1fa987f2e6, type: 3}
 --- !u!1 &8297575352515258527
 GameObject:
   m_ObjectHideFlags: 0
