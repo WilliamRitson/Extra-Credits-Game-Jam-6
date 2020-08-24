@@ -40,6 +40,8 @@ public class Cat : MonoBehaviour
     public float hyperMultiplier = 2;
     private static readonly int Attack = Animator.StringToHash("Attack");
 
+
+
     public enum State {
         Neutral,
         Hyper,
@@ -66,6 +68,25 @@ public class Cat : MonoBehaviour
         }
         DrawIntentions();
         movingTowards = moveIntentions[0];
+
+        Debug.Log(Options.difficulty);
+
+        if (Options.difficulty == Difficulty.Easy)
+        {
+            baseSpeed = 0.7f;
+        }
+        else if (Options.difficulty == Difficulty.Medium)
+        {
+            baseSpeed = 1;
+        }
+        else if (Options.difficulty == Difficulty.Hard)
+        {
+            baseSpeed = 1.4f;
+        }
+        else if (Options.difficulty == Difficulty.Hyper)
+        {
+            baseSpeed = 3f;
+        }
 
     }
 

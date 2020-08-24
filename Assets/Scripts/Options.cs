@@ -2,7 +2,7 @@
 
 public enum Difficulty
 {
-    Easy, Medium, Hard
+    Easy, Medium, Hard, Hyper
 }
 
 public class Options
@@ -18,7 +18,9 @@ public class Options
              case Difficulty.Medium:
                  return 30;
              case Difficulty.Hard:
-                 return 40;
+                return 40;
+            case Difficulty.Hyper:
+                return 50;
              default:
                  throw new ArgumentOutOfRangeException();
         }
