@@ -51,7 +51,7 @@ jobs:
     needs: [buildForSomePlatforms]
     steps:
     - name: Download build
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: Build
     - uses: josephbmanley/butler-publish-itchio-action@master
